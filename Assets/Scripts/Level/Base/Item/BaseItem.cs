@@ -11,7 +11,7 @@ public abstract class BaseItem : MonoBehaviour,IPointerClickHandler,IPointerEnte
 
     private void Start()
     {
-        _controller = FindObjectOfType<BaseLevelController>();
+        _controller = BaseLevelController.Instance;
     }
 
     public abstract void OnPointerClick(PointerEventData eventData);

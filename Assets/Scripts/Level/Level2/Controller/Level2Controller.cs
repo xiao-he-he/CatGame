@@ -15,7 +15,7 @@ namespace Level.Contronal
         
         
         private Level2Model _model;
-        private void Awake()
+        private void Start()
         {
             _model = new Level2Model();
         }
