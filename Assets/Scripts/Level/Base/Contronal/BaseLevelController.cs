@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Level.Contronal
 {
-    public class BaseLevelController:MonoBehaviour
+    public abstract class BaseLevelController:MonoBehaviour
     {
         private static BaseLevelController _instance;
         public static BaseLevelController Instance
