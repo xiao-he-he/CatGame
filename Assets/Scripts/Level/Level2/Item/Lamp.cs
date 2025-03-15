@@ -6,12 +6,6 @@ namespace Item
 {
     public class Lamp:BaseItem
     {
-        [RuntimeInitializeOnLoadMethod]
-        static void DisableBurstVerification()
-        {
-            Unity.Burst.BurstCompiler.Options.EnableBurstCompileSynchronously = false;
-            //Unity.Burst.BurstCompiler.Options.EnableSafetyChecks = false;
-        }
         public override void OnPointerClick(PointerEventData eventData)
         {
             var c = _controller as Level2Controller;

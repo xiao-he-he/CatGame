@@ -37,5 +37,16 @@ namespace Level.Contronal
             
             
         }
+
+        public void Success()
+        {
+            //游戏成功的逻辑
+        }
+
+        public void Fail()
+        {
+            //游戏失败的逻辑
+        }
+        
     }
 }
