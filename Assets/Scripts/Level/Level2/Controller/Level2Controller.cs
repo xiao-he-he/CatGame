@@ -12,16 +12,12 @@ namespace Level.Contronal
     {
         public Light2D levellamp;
         public Light2D levellight;
+        private Level2Model _model = Level2Model.Instance;
         
-        
-        private Level2Model _model;
-        private void Start()
-        {
-            _model = new Level2Model();
-        }
 
         public void ChangeLight()
         {
+            
             _model.IsOpenLight = !_model.IsOpenLight;
             if (_model.IsOpenLight)
             {

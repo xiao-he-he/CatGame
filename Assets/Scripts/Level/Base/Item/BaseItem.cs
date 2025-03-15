@@ -9,7 +9,7 @@ public abstract class BaseItem : MonoBehaviour,IPointerClickHandler,IPointerEnte
 {
     protected BaseLevelController _controller;
 
-    private void Start()
+    protected virtual void Start()
     {
         _controller = BaseLevelController.Instance;
     }

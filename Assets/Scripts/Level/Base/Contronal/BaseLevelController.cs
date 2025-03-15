@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Level.Contronal
 {
-    public class BaseLevelController:MonoBehaviour
+    public abstract class BaseLevelController:MonoBehaviour
     {
         private static BaseLevelController _instance;
         public static BaseLevelController Instance
@@ -37,5 +37,16 @@ namespace Level.Contronal
             
             
         }
+
+        public void Success()
+        {
+            //游戏成功的逻辑
+        }
+
+        public void Fail()
+        {
+            //游戏失败的逻辑
+        }
+        
     }
 }
