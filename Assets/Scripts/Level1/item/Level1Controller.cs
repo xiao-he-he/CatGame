@@ -9,9 +9,9 @@ public class Level1Controller : MonoBehaviour
    
     private StageConfig[] stages = new StageConfig[]
     {
-        new StageConfig(60, 1, 8),
+        new StageConfig(60, 1, 6),
         new StageConfig(60, 2, 6),
-        new StageConfig(60, 2, 4)
+        new StageConfig(60, 3, 4)
     };
 
     void Start()

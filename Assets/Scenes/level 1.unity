@@ -1360,13 +1360,14 @@ GameObject:
   - component: {fileID: 951008331}
   - component: {fileID: 951008330}
   - component: {fileID: 951008332}
+  - component: {fileID: 951008334}
   m_Layer: 0
   m_Name: "\u5E8A\u4E0A\u732B"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &951008330
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1488,6 +1489,18 @@ PolygonCollider2D:
       - {x: 1.6899999, y: -0.185}
       - {x: 1.75, y: -0.155}
       - {x: 1.89, y: -0.21499999}
+--- !u!114 &951008334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951008329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1032634831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,7 +1759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   childObjects:
-  - {fileID: 765528883}
+  - {fileID: 951008329}
   - {fileID: 765528883}
   - {fileID: 1503822180}
   - {fileID: 823427575}
@@ -2396,6 +2409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953661736}
   - component: {fileID: 1953661737}
+  - component: {fileID: 1953661738}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2436,6 +2450,19 @@ MonoBehaviour:
   object4: {fileID: 1032634831}
   baseInterval: 0.5
   finalStayDuration: 3
+--- !u!114 &1953661738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953661734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ad67f58a8ef7446b33d95925d35844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  object1: {fileID: 951008329}
 --- !u!1 &2138548307
 GameObject:
   m_ObjectHideFlags: 0

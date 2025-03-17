@@ -1,13 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using Level.Contronal;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEngine.GraphicsBuffer;
 
 public class Catdisappear : BaseItem
 {
+    
+
     public override void OnPointerClick(PointerEventData eventData)
     {
-        transform.parent.gameObject.SetActive(false); // Òþ²ØÃ¨
+       
+            var c = _controller as game1controller;
+            c.catdisappear1();
+        
     }
 
     public override void OnPointerEnter(PointerEventData eventData)
@@ -19,4 +26,5 @@ public class Catdisappear : BaseItem
     {
        
     }
+    
 }
