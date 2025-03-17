@@ -4,16 +4,18 @@ using Level.Contronal;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using static UnityEngine.GraphicsBuffer;
+using level1model;
 
 public class CatItem : BaseItem
 {
-
+    public GameObject object1;
     
     public override void OnPointerClick(PointerEventData eventData)
     {
 
         catdisappear1();
-
+        Level1Model.CatModel++;
+        Debug.Log($" 调用次数: {Level1Model.CatModel}");
 
     }
 
@@ -34,12 +36,10 @@ public class CatItem : BaseItem
         }
 
     }
-    public GameObject object1;
+   
 
     public void catdisappear1()
     {
-
-        Debug.Log("点击");
         ToggleObject(object1, false);// 隐藏猫
     }
 
