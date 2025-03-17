@@ -1,24 +1,24 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class walkingcatanimation : walkingcatdisappear
 {
-    [Header("ÎïÌåÒıÓÃÅäÖÃ")]
+    [Header("ç‰©ä½“å¼•ç”¨é…ç½®")]
     public GameObject object1;
     public GameObject object2;
     public GameObject object3;
     public GameObject object4;
 
-    [Header("Ê±¼ä²ÎÊı")]
-    [Tooltip("»ù´¡¼ä¸ôÊ±¼ä")]
+    [Header("æ—¶é—´å‚æ•°")]
+    [Tooltip("åŸºç¡€é—´éš”æ—¶é—´")]
     public float baseInterval = 0.5f;
-    [Tooltip("×îºóÎïÌåÍ£ÁôÊ±¼ä")]
+    [Tooltip("æœ€åç‰©ä½“åœç•™æ—¶é—´")]
     public float finalStayDuration = 3f;
 
     void Update()
     {
-        //µÚÒ»½×¶Î£º¼ì²âÎïÌå1ÊÇ·ñ±»ÏÔÊ¾
+        //ç¬¬ä¸€é˜¶æ®µï¼šæ£€æµ‹ç‰©ä½“1æ˜¯å¦è¢«æ˜¾ç¤º
         if (IsObject1Active())
         {
             if (!walkingcatdisappear.OnPointerClick()) 
@@ -34,21 +34,21 @@ public class walkingcatanimation : walkingcatdisappear
        
         yield return new WaitForSeconds(baseInterval);
 
-        // µÚ¶ş½×¶Î£ºÇĞ»»ÎïÌå1->ÎïÌå2
+        // ç¬¬äºŒé˜¶æ®µï¼šåˆ‡æ¢ç‰©ä½“1->ç‰©ä½“2
         ToggleObject(object1, false);
         ToggleObject(object2, true);
         yield return new WaitForSeconds(baseInterval);
 
-        // µÚÈı½×¶Î£ºÇĞ»»ÎïÌå2->ÎïÌå3
+        // ç¬¬ä¸‰é˜¶æ®µï¼šåˆ‡æ¢ç‰©ä½“2->ç‰©ä½“3
         ToggleObject(object2, false);
         ToggleObject(object3, true);
         yield return new WaitForSeconds(baseInterval);
 
-        // µÚËÄ½×¶Î£ºÇĞ»»ÎïÌå3->ÎïÌå4
+        // ç¬¬å››é˜¶æ®µï¼šåˆ‡æ¢ç‰©ä½“3->ç‰©ä½“4
         ToggleObject(object3, false);
         ToggleObject(object4, true);
 
-        // ×îºóµÈ´ı²¢Òş²ØÎïÌå4
+        // æœ€åç­‰å¾…å¹¶éšè—ç‰©ä½“4
         yield return new WaitForSeconds(finalStayDuration);
         ToggleObject(object4, false);
     }
