@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class walkingcatanimation : Catdisappear
+public class walkingcatanimation : walkingcatdisappear
 {
     [Header("物体引用配置")]
     public GameObject object1;
@@ -21,7 +21,7 @@ public class walkingcatanimation : Catdisappear
         //第一阶段：检测物体1是否被显示
         if (IsObject1Active())
         {
-            if (!Catdisappear.OnPointerClick()) 
+            if (!walkingcatdisappear.OnPointerClick()) 
             {
                 StartCoroutine(SequenceRoutine());
             }
