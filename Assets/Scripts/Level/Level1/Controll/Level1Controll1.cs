@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level1Controll : MonoBehaviour
+public class Level1Controll1 : MonoBehaviour
 {
     public List<GameObject> childObjects = new List<GameObject>();
 
-   
+
     private StageConfig[] stages = new StageConfig[]
     {
-        new StageConfig(60, 1, 6),
-        new StageConfig(60, 2, 6),
-        new StageConfig(60, 3, 4)
+        new StageConfig(15, 1, 3),
+        
     };
 
     void Start()
@@ -37,7 +36,7 @@ public class Level1Controll : MonoBehaviour
             while (stageTimer < stage.duration)
             {
                 // 等待间隔时间
-                yield return new WaitForSeconds(10);
+                yield return new WaitForSeconds(5);
 
                 // 随机选择对象
                 List<GameObject> selected = GetRandomObjects(stage.objectsToShow);
@@ -45,7 +44,7 @@ public class Level1Controll : MonoBehaviour
                 // 显示并隐藏对象
                 StartCoroutine(ShowAndHide(selected, stage.visibleDuration));
 
-                stageTimer += 10;
+                stageTimer += 5;
             }
         }
     }

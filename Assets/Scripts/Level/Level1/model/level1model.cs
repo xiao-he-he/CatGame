@@ -6,6 +6,8 @@ namespace level1model
     {
     public class Level1Model : BaseLevelModel<Level1Model>
     {
-        public static int CatModel = 0;
+        public  int CatModel = 0;
+        public  float time = 0;
+       
     } 
 }

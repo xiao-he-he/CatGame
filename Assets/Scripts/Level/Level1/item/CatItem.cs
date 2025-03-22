@@ -9,15 +9,18 @@ using level1model;
 public class CatItem : BaseItem
 {
     public GameObject object1;
-    
+
+
+
     public override void OnPointerClick(PointerEventData eventData)
     {
-
-        catdisappear1();
-        Level1Model.CatModel++;
-        Debug.Log($" 调用次数: {Level1Model.CatModel}");
-
+            catdisappear1();
+            Level1Model.Instance.CatModel++;
+            Debug.Log($"调用次数: {Level1Model.Instance.CatModel}");
+       
     }
+
+    
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
