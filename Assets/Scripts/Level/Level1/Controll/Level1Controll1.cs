@@ -1,31 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Level1Controll1 : MonoBehaviour
 {
-    public List<GameObject> childObjects = new List<GameObject>();
-
-
-    private StageConfig[] stages = new StageConfig[]
-    {
-        new StageConfig(15, 1, 3),
-        
-    };
+    private List<StageConfig> stages = new();
 
     void Start()
     {
-        InitializeObjects();
         StartCoroutine(StageManager());
     }
 
-    void InitializeObjects()
-    {
-        foreach (var obj in childObjects)
-        {
-            obj.SetActive(false);
-        }
-    }
 
     IEnumerator StageManager()
     {
@@ -51,7 +37,7 @@ public class Level1Controll1 : MonoBehaviour
 
     List<GameObject> GetRandomObjects(int count)
     {
-        List<GameObject> candidates = new List<GameObject>(childObjects);
+        List<GameObject> candidates = new List<GameObject>();
         List<GameObject> selected = new List<GameObject>();
 
         for (int i = candidates.Count - 1; i > 0; i--)
@@ -66,6 +52,7 @@ public class Level1Controll1 : MonoBehaviour
         {
             selected.Add(candidates[i]);
         }
+
         return selected;
     }
 
@@ -88,8 +75,8 @@ public class Level1Controll1 : MonoBehaviour
     }
 
 
-    [System.Serializable]
-    private class StageConfig
+    [CreateAssetMenu]
+    public class StageConfig : ScriptableObject
     {
         public float duration;
         public int objectsToShow;
@@ -103,3 +90,4 @@ public class Level1Controll1 : MonoBehaviour
         }
     }
 }
+

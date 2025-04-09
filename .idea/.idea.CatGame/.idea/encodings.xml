@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise" />
+  <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Level/Level1/Controll/Level1Controll1.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Level/Level1/Controll/Level1Controll2.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Level/Level1/Controll/Level1Controll3.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Level/Level1/Controll/RelayControl.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Level/Level1/item/CatItem.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Level/Level2-wakeup/Controll/WakeUpControll.cs" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/Level/Level2-wakeup/Item/WakeItem.cs" charset="GBK" />
+  </component>
 </project>

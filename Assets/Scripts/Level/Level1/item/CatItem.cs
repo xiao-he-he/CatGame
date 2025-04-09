@@ -8,15 +8,10 @@ using level1model;
 
 public class CatItem : BaseItem
 {
-    public GameObject object1;
-   
-   
-   
-
    
     public override void OnPointerClick(PointerEventData eventData)
     {
-            catdisappear1();
+            gameObject.SetActive(false);
             Level1Model.Instance.CatModel++;
             Debug.Log($"调用次数: {Level1Model.Instance.CatModel}");
        
@@ -32,20 +27,6 @@ public class CatItem : BaseItem
     public override void OnPointerExit(PointerEventData eventData)
     {
        
-    }
-    void ToggleObject(GameObject target, bool state)
-    {
-        if (target != null)
-        {
-            target.SetActive(state);
-        }
-
-    }
-   
-
-    public void catdisappear1()
-    {
-        ToggleObject(object1, false);// 隐藏猫
     }
 
 }
