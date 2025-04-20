@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level2-wakeup.unity
     guid: e55c5bf170a4fff40a5b245b3d34d9a6
+  - enabled: 1
+    path: Assets/Scenes/Level_3.unity
+    guid: d369757975872d54ea782086d00af6a1
+  - enabled: 1
+    path: Assets/Scenes/Level_5.unity
+    guid: cbc3ee4e9ea4ca34ab5ad9db10759fe0
+  - enabled: 1
+    path: Assets/Scenes/Level_5_ZhengZha.unity
+    guid: 2c2a36fede58e3d4489cf095ae1bacad
+  - enabled: 1
+    path: Assets/Scenes/Level_6.unity
+    guid: f3bc020c83b2bcf4f896139afac0bf0f
   m_configObjects: {}

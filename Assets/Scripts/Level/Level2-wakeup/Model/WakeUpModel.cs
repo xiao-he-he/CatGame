@@ -8,7 +8,10 @@ namespace wakeupmodel
     {
         public float clickModel = 0f;
         public float FrequencyTime = 0f;
-        public float FrequencyRange = 3f;
+        public float FrequencyRange = 2f;
+        public float AngryTime = 0f;
+        public float SleepTime = 0f;
+        public float ComfotableTime = 0f;
         public float GetFrequency()
         {
             if (FrequencyTime > 0f) // ·ÀÖ¹³ýÒÔÁã
