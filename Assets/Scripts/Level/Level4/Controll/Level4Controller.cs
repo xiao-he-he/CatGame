@@ -64,18 +64,46 @@ namespace Level.Level4.Controll
         {
             _model.OpenUpCabinet = !_model.OpenUpCabinet;
             GZup.SetActive(_model.OpenUpCabinet);
+            if (_model.OpenUpCabinet)
+            {
+                if (_model.OpenLeftCabinet)
+                {
+                    UseLeftCabinet();
+                }
+            }
         }
         
         public void UseDownCabinet()
         {
             _model.OpenDownCabinet = !_model.OpenDownCabinet;
             GZdown.SetActive(_model.OpenDownCabinet);
+            if (_model.OpenDownCabinet)
+            {
+                if (_model.OpenLeftCabinet)
+                {
+                    UseLeftCabinet();
+                }
+            }
         }
         public void UseLeftCabinet()
         {
             _model.OpenLeftCabinet = !_model.OpenLeftCabinet;
             GZLeft.SetActive(_model.OpenLeftCabinet);
             leftOpen.SetActive(!_model.OpenLeftCabinet);
+
+            if (_model.OpenLeftCabinet)
+            {
+                if (_model.OpenUpCabinet)
+                {
+                    UseUpCabinet();
+                }
+
+                if (_model.OpenDownCabinet)
+                {
+                    UseDownCabinet();
+                }
+                
+            }
         }
         
         public void UseRightCabinet()
