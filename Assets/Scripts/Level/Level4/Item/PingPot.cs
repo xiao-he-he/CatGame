@@ -12,9 +12,6 @@ namespace Level.Level4.Item
             var c = _controller as  Level4Controller;
             c.OpenPingPot();
         }
-
-        public override void OnPointerEnter(PointerEventData eventData) {}
-
-        public override void OnPointerExit(PointerEventData eventData) {}
+        
     }
 }

@@ -3,12 +3,13 @@ using UnityEngine.EventSystems;
 
 namespace Level.Level4.Item
 {
-    public class UpCabinet:BaseItem
+    public class Clip:BaseItem
     {
         public override void OnPointerClick(PointerEventData eventData)
         {
-            ((Level4Controller)_controller).UseUpCabinet();
+            ((Level4Controller)_controller).UseClip();
         }
-        
+
+       
     }
 }

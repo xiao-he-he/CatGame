@@ -10,9 +10,6 @@ namespace Level.Level4.Item
             var c = _controller as  Level4Controller;
             c.CheckCat();
         }
-
-        public override void OnPointerEnter(PointerEventData eventData) => throw new System.NotImplementedException();
-
-        public override void OnPointerExit(PointerEventData eventData) => throw new System.NotImplementedException();
+        
     }
 }

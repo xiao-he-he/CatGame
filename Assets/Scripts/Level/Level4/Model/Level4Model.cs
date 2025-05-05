@@ -1,4 +1,5 @@
 ﻿using Level.Model;
+using Unity.VisualScripting;
 
 namespace Level.Level4.Model
 {
@@ -18,5 +19,7 @@ namespace Level.Level4.Model
         public int PotPos = 1;
 
         public bool PotHasWater;
+        public bool HasHotWater =>OpenFireDown && PotPos == 3 && PotHasWater;
+        public bool HasPutCan;
     }
 }

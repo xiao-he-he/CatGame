@@ -1,10 +1,11 @@
-﻿using Level.Contronal;
+﻿using System;
+using Level.Contronal;
 using Level.Level4.Model;
 using UnityEngine;
 
 namespace Level.Level4.Controll
 {
-    public class Level4Controller:BaseLevelController
+    public partial class Level4Controller:BaseLevelController
     {
         private Level4Model _model = Level4Model.Instance;
         public GameObject PingPotCover,Cat;
@@ -14,6 +15,10 @@ namespace Level.Level4.Controll
         public GameObject GZLeft,leftOpen, GZRight,rightopen;
         public GameObject Water;
         public GameObject Pot_1,pot_2,pot_3;
+        public GameObject Pot_2_Water, Pot_3_Water;
+        public GameObject Bobble;
+        public GameObject Can_1, Can_2;
+        public GameObject Chlip;
         public void OpenPingPot()
         {
             PingPotCover.SetActive(false);
@@ -37,7 +42,9 @@ namespace Level.Level4.Controll
         {
             _model.OpenFireDown = !_model.OpenFireDown;
             FireDown.SetActive(_model.OpenFireDown);
+            Bobble.SetActive(_model.HasHotWater);
         }
+        
 
         public void UseUpCabinet()
         {
@@ -68,6 +75,17 @@ namespace Level.Level4.Controll
         {
             _model.OpenWater = !_model.OpenWater;
             Water.SetActive(_model.OpenWater);
+            if (_model.PotPos == 2)
+            {
+                PotFullWater();
+            }
+        }
+
+        public void PotFullWater()
+        {
+            _model.PotHasWater = true;
+            Pot_2_Water.SetActive(true);
+            Pot_3_Water.SetActive(true);
         }
 
         public void MovePot()
@@ -83,6 +101,7 @@ namespace Level.Level4.Controll
                 pot_2.SetActive(false);
                 pot_3.SetActive(true);
                 _model.PotPos++;
+                Bobble.SetActive(_model.HasHotWater);
             }
             else
             {
@@ -91,6 +110,25 @@ namespace Level.Level4.Controll
                 _model.PotPos--;
             }
            
+        }
+
+        public void PutCan()
+        {
+            if (Level4Model.Instance.HasHotWater)
+            {
+                _model.HasPutCan = true;
+            }
+            Can_1.SetActive(!_model.HasPutCan);
+            Can_2.SetActive(_model.HasPutCan);
+        }
+
+        public void UseClip()
+        {
+            if (_model.HasPutCan)
+            {
+                Chlip.SetActive(false);
+                //播放结束动画
+            }
         }
     }
 }
