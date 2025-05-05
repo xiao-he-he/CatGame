@@ -33,8 +33,8 @@ public class WakeItem : BaseItem
             WakeUpModel.Instance.FrequencyTime = 0f;
             WakeUpModel.Instance.clickModel = 0f;
         }
-        // 打印当前值（可以移除此行）
-        Debug.Log("当前数值: " + WakeUpModel.Instance.FrequencyTime);
+       
+       
     }
     IEnumerator Delay()
     {

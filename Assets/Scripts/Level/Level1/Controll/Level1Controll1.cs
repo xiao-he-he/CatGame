@@ -1,25 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
+using level1model;
 using UnityEditor;
 using UnityEngine;
 
 public class Level1Controll1 : MonoBehaviour
 {
-    private List<StageConfig> stages = new();
+    public List<GameObject> childObjects = new List<GameObject>();
+
+
+    private StageConfig[] stages = new StageConfig[]
+    {
+        new StageConfig(15, 1, 3),
+        
+    };
 
     void Start()
     {
+
+        InitializeObjects();
         StartCoroutine(StageManager());
     }
 
+    void InitializeObjects()
+    {
+        foreach (var obj in childObjects)
+        {
+            obj.SetActive(false);
+        }
+    }
 
     IEnumerator StageManager()
     {
+       
         foreach (var stage in stages)
         {
-            float stageTimer = 0;
-
-            while (stageTimer < stage.duration)
+           
+            while (Level1Model.Instance.time < stage.duration)
             {
                 // 等待间隔时间
                 yield return new WaitForSeconds(5);
@@ -30,14 +47,14 @@ public class Level1Controll1 : MonoBehaviour
                 // 显示并隐藏对象
                 StartCoroutine(ShowAndHide(selected, stage.visibleDuration));
 
-                stageTimer += 5;
+                Level1Model.Instance.time += 5;
             }
         }
     }
 
     List<GameObject> GetRandomObjects(int count)
     {
-        List<GameObject> candidates = new List<GameObject>();
+        List<GameObject> candidates = new List<GameObject>(childObjects);
         List<GameObject> selected = new List<GameObject>();
 
         for (int i = candidates.Count - 1; i > 0; i--)
@@ -52,7 +69,6 @@ public class Level1Controll1 : MonoBehaviour
         {
             selected.Add(candidates[i]);
         }
-
         return selected;
     }
 
@@ -75,8 +91,8 @@ public class Level1Controll1 : MonoBehaviour
     }
 
 
-    [CreateAssetMenu]
-    public class StageConfig : ScriptableObject
+    [System.Serializable]
+    private class StageConfig
     {
         public float duration;
         public int objectsToShow;
@@ -90,4 +106,3 @@ public class Level1Controll1 : MonoBehaviour
         }
     }
 }
-

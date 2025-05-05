@@ -325,7 +325,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 462463731}
 --- !u!60 &462463734
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -687,7 +686,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 507192813}
 --- !u!95 &507192818
 Animator:
   serializedVersion: 5
@@ -1114,7 +1112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 605276518}
 --- !u!1 &605494267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 605494267}
 --- !u!60 &605494269
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1456,7 +1452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 609845497}
 --- !u!1 &613436273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,7 +1754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 682797773}
 --- !u!1 &765528883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,7 +1933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 765528883}
 --- !u!1 &807613636
 GameObject:
   m_ObjectHideFlags: 0
@@ -2260,7 +2253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 823427575}
 --- !u!1 &911507678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2538,7 +2530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 951008329}
 --- !u!95 &951008335
 Animator:
   serializedVersion: 5
@@ -2607,7 +2598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 998855950}
 --- !u!60 &998855953
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3358,7 +3348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 1503822180}
 --- !u!1 &1591201055
 GameObject:
   m_ObjectHideFlags: 0
@@ -3648,7 +3637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 1722718543}
 --- !u!95 &1722718548
 Animator:
   serializedVersion: 5
@@ -4091,14 +4079,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1953661736}
-  - component: {fileID: 1953661739}
-  - component: {fileID: 1953661737}
   - component: {fileID: 1953661738}
   - component: {fileID: 1953661742}
   - component: {fileID: 1953661740}
   - component: {fileID: 1953661741}
   - component: {fileID: 1953661743}
   - component: {fileID: 1953661744}
+  - component: {fileID: 1953661746}
+  - component: {fileID: 1953661745}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -4121,24 +4109,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1953661737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953661734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2728e5ec6720bc49ad4ae2834eb9146, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  childObjects:
-  - {fileID: 951008329}
-  - {fileID: 765528883}
-  - {fileID: 1503822180}
-  - {fileID: 823427575}
-  - {fileID: 2138548307}
 --- !u!114 &1953661738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4165,21 +4135,6 @@ MonoBehaviour:
   - {fileID: 462463731}
   - {fileID: 998855950}
   - {fileID: 605494267}
---- !u!114 &1953661739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953661734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3b7c1b2da0a80948b585635cfadf4b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  childObjects:
-  - {fileID: 951008329}
-  - {fileID: 823427575}
 --- !u!114 &1953661740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4256,6 +4211,40 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &1953661745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953661734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2728e5ec6720bc49ad4ae2834eb9146, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childObjects:
+  - {fileID: 765528883}
+  - {fileID: 1722718543}
+  - {fileID: 998855950}
+  - {fileID: 605494267}
+--- !u!114 &1953661746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953661734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b7c1b2da0a80948b585635cfadf4b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childObjects:
+  - {fileID: 951008329}
+  - {fileID: 1503822180}
+  - {fileID: 823427575}
+  - {fileID: 2138548307}
 --- !u!1 &2060622761
 GameObject:
   m_ObjectHideFlags: 0
@@ -4515,4 +4504,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8964e014fb69e21418c178edbd1b1585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  object1: {fileID: 2138548307}
