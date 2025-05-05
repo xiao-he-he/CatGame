@@ -45,7 +45,7 @@ public class WakeUpControll : BaseLevelController
         if (number > 0& UI.position.y <= 3.7)
         {
             // ÏòÉÏÒÆ¶¯
-            UI.position += offset1 * Time.deltaTime;
+            UI.position += offset1*Time.deltaTime;
         }
         else if (number < 0& UI.position.y >= -3.7 )
         {
