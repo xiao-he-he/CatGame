@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level6-fishing.unity
     guid: 7202dc92cba3d914ab77c841721413d7
+  - enabled: 1
+    path: Assets/Scenes/Level_6 1.unity
+    guid: 63e5d7f7570b0184d994dd3267029df8
   m_configObjects: {}

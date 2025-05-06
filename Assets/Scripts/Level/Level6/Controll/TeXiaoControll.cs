@@ -14,22 +14,22 @@ public class TeXiaoControll : MonoBehaviour
         if(Level6Model.Instance.MusicMode1 == 1)
         {
             TeXiao1.SetActive(true);
-            StartCoroutine(HideTargetAfterDelay1(0.3f));
+            StartCoroutine(HideTargetAfterDelay1(0.1f));
         }
         if (Level6Model.Instance.MusicMode2 == 1)
         {
             TeXiao2.SetActive(true);
-            StartCoroutine(HideTargetAfterDelay2(0.3f));
+            StartCoroutine(HideTargetAfterDelay2(0.1f));
         }
         if (Level6Model.Instance.MusicMode3 == 1)
         {
             TeXiao3.SetActive(true);
-            StartCoroutine(HideTargetAfterDelay3(0.3f));
+            StartCoroutine(HideTargetAfterDelay3(0.1f));
         }
         if (Level6Model.Instance.MusicMode4 == 1)
         {
             TeXiao4.SetActive(true);
-            StartCoroutine(HideTargetAfterDelay4(0.3f));
+            StartCoroutine(HideTargetAfterDelay4(0.1f));
         }
         IEnumerator HideTargetAfterDelay1(float delay)
         {

@@ -28,7 +28,7 @@ public class WinOrLose : MonoBehaviour
         Debug.Log(WakeUpModel.Instance.SleepTime);
         Debug.Log(WakeUpModel.Instance.ComfotableTime);
         
-        if (WakeUpModel.Instance.ComfotableTime >= 60f)
+        if (WakeUpModel.Instance.ComfotableTime >= 30f)
         {
             Win();
             Time.timeScale = 0f;

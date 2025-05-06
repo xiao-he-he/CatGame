@@ -1,63 +1,72 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class CatMoveItem : MonoBehaviour
 {
-    [Header("ÒÆ¶¯ÉèÖÃ")]
-    public float moveSpeed = 4f;       // ÒÆ¶¯ËÙ¶È(µ¥Î»/Ãë)
-    public float leftBoundX = -7.76f;     // ×ó±ß½çX×ø±ê
-    public float rightBoundX = 7.76f;     // ÓÒ±ß½çX×ø±ê
-    public float fixedZPosition = 0f;  // ¹Ì¶¨µÄZÖáÎ»ÖÃ
+    [Header("ç§»åŠ¨è®¾ç½®")]
+    public float moveSpeed = 4f;
+    public float leftBoundX = -7.76f;
+    public float rightBoundX = 7.76f;
+    public float fixedZPosition = 0f;
+    public float acceleration = 0.5f;
+    public float maxSpeed = 10f;
 
-    private bool movingRight = true;   // µ±Ç°ÒÆ¶¯·½Ïò
-    private Vector3 currentPosition;   // ÓÃÓÚ´æ´¢Î»ÖÃ
+    private bool movingRight = true;
+    private Vector3 currentPosition;
+    private float currentMoveSpeed;
 
     private void Start()
     {
-        // ³õÊ¼»¯Ê±¹Ì¶¨ZÖáÎ»ÖÃ
         currentPosition = transform.position;
         currentPosition.z = fixedZPosition;
         transform.position = currentPosition;
+        currentMoveSpeed = moveSpeed;
     }
 
     private void Update()
     {
-        // »ñÈ¡µ±Ç°Î»ÖÃ²¢¹Ì¶¨ZÖá
         currentPosition = transform.position;
         currentPosition.z = fixedZPosition;
 
-        // ¸ù¾Ýµ±Ç°·½ÏòÒÆ¶¯£¨ÐÞÕýÁËdirection¼ÆËã´íÎó£©
-        float direction = movingRight ? 1 : -1;
-        currentPosition.x += direction * moveSpeed * Time.deltaTime;
+        // 1. å…ˆè®¡ç®—é€Ÿåº¦ï¼ˆä¸è€ƒè™‘æ–¹å‘ï¼‰
+        currentMoveSpeed = Mathf.Clamp(
+            Mathf.Abs(currentMoveSpeed) + acceleration * Time.deltaTime,
+            0,
+            maxSpeed
+        );
 
-        // ¼ì²éÊÇ·ñµ½´ï±ß½ç
-        if (movingRight && currentPosition.x >= rightBoundX)
+        // 2. åº”ç”¨æ–¹å‘
+        float moveDirection = movingRight ? 1 : -1;
+        currentPosition.x += moveDirection * currentMoveSpeed * Time.deltaTime;
+
+        // 3. è¾¹ç•Œæ£€æŸ¥ï¼ˆå…ˆç§»åŠ¨å†ä¿®æ­£ï¼‰
+        if (currentPosition.x > rightBoundX)
         {
-            currentPosition.x = rightBoundX; // È·±£²»³¬³ö±ß½ç
-            movingRight = false;
-            FlipDirection();
+            currentPosition.x = rightBoundX;
+            ChangeDirection(false);
         }
-        else if (!movingRight && currentPosition.x <= leftBoundX)
+        else if (currentPosition.x < leftBoundX)
         {
-            currentPosition.x = leftBoundX; // È·±£²»³¬³ö±ß½ç
-            movingRight = true;
-            FlipDirection();
+            currentPosition.x = leftBoundX;
+            ChangeDirection(true);
         }
 
-        // Ó¦ÓÃÎ»ÖÃ£¨È·±£ZÖá¹Ì¶¨£©
         transform.position = currentPosition;
     }
 
-    // Í¨¹ýÐý×ªYÖá¸Ä±ä³¯Ïò
-    private void FlipDirection()
+    private void ChangeDirection(bool newRightDirection)
     {
+        if (movingRight == newRightDirection) return;
+
+        movingRight = newRightDirection;
         transform.rotation = Quaternion.Euler(
             transform.rotation.eulerAngles.x,
             movingRight ? 0 : 180,
             transform.rotation.eulerAngles.z
         );
+        // è½¬å‘æ—¶é€Ÿåº¦ç«‹å³åå‘
+        currentMoveSpeed *= -1;
     }
 
-    // ¿ÉÊÓ»¯ÏÔÊ¾ÒÆ¶¯·¶Î§£¨ÐÞÕýÁËÊ¹ÓÃ¹Ì¶¨ZÎ»ÖÃ£©
     private void OnDrawGizmosSelected()
     {
         Vector3 leftPos = new Vector3(leftBoundX, transform.position.y, fixedZPosition);

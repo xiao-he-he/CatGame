@@ -48,10 +48,12 @@ public class WakeItem : BaseItem
         isClicked = true;
         WakeUpModel.Instance.clickModel++;
         animatorCat.SetTrigger(triggerName2);
+        animatorHand.SetTrigger(triggerName4);
         Debug.Log("µã»÷");
         Delay();
         animatorCat.SetTrigger(triggerName1);
-
+        animatorHand.SetTrigger(triggerName3);
+       
     }
 
 

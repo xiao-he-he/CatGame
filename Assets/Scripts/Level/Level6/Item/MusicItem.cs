@@ -4,10 +4,6 @@ using UnityEngine.EventSystems;
 
 public class MusicItem : BaseItem
 {
-   
-
-
-
     void Update()
     {
         

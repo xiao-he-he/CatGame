@@ -38,7 +38,10 @@ public abstract class Level5BaseItem : MonoBehaviour,
         StartCoroutine(WhileHolding());
     }
 
-   
+    public virtual void OnRelease()
+    {
+        // 基类默认逻辑（可以是空的）
+    }
     public virtual void OnPointerUp(PointerEventData eventData)
     {
         _isHolding = false;

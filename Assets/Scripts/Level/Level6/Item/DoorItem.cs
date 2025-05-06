@@ -7,20 +7,20 @@ public class DoorItem : BaseItem
 {
     public GameObject Door;
     public GameObject Cat;
-    public bool IsDoor;
+    
     public override void OnPointerClick(PointerEventData eventData)
     {
-        if (IsDoor)
+        if (Level6Model.Instance.IsDoor)
         {
             Cat.SetActive(true);
 Door.SetActive(false);
-            IsDoor = false;
+            Level6Model.Instance.IsDoor = false;
         }
         else
         {
             Cat.SetActive(false);
          Door.SetActive(true);
-            IsDoor = true;
+            Level6Model.Instance.IsDoor = true;
         }
        
     }
