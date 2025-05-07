@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using View.Select;
 
 public class ItemCatItem : Level5BaseItem
 {
@@ -86,7 +87,7 @@ public class ItemCatItem : Level5BaseItem
         else
         {
             gameObject.SetActive(false);
-            LoseUI.SetActive(true);
+            EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level6/Wrong"));
         }
     }
 }

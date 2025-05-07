@@ -21,10 +21,6 @@ public class TiaoItem : MonoBehaviour
     private bool isPausing = false;
     public GameObject moon;
     public GameObject sun;
-    public GameObject blood1;
-    public GameObject blood2;   
-    public GameObject blood3;
-    public GameObject blood4;
     public GameObject chou;
 
 
@@ -119,21 +115,17 @@ public class TiaoItem : MonoBehaviour
         {
             moon.SetActive(true);
             sun.SetActive(false);
-            blood1.SetActive(false);
-            blood2.SetActive(false);
-            blood3.SetActive(false);
-            blood4.SetActive(false);
+           
             chou.SetActive(false);
+            Level5Model.Instance.isSun = false;
         }
         else
         {
             moon.SetActive(false);
             sun.SetActive(true);
-            blood1.SetActive(true);
-            blood2.SetActive(true);
-            blood3.SetActive(true);
-            blood4.SetActive(true);
+            
             chou.SetActive(false);
+            Level5Model.Instance.isSun = true;  
         }
     }
 }

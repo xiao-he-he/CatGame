@@ -629,8 +629,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.6, y: 0.0000023842}
-  m_SizeDelta: {x: 76.789, y: 39.8109}
+  m_AnchoredPosition: {x: 1.6, y: -8.905103}
+  m_SizeDelta: {x: 76.789, y: 57.6211}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &272158416
 MonoBehaviour:
@@ -653,7 +653,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 684c3a3945c34be49a7dc9f97197e695, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
@@ -1146,8 +1146,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.6, y: 0.0000023842}
-  m_SizeDelta: {x: 76.789, y: 39.8109}
+  m_AnchoredPosition: {x: 1.6, y: -4.1385016}
+  m_SizeDelta: {x: 76.789, y: 48.0879}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &352455441
 MonoBehaviour:
@@ -1170,7 +1170,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 684c3a3945c34be49a7dc9f97197e695, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
@@ -1182,7 +1182,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u786E\u5B9A\u78E8\u597D\u6307\u7532\u4E86\u5417\n"
+  m_Text: "\u786E\u5B9A\u78E8\u597D\u6307\u7532\u4E86\u5417"
 --- !u!222 &352455442
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1445,8 +1445,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.6, y: 0.0000023842}
-  m_SizeDelta: {x: 76.789, y: 39.8109}
+  m_AnchoredPosition: {x: 1.6, y: -1.9846}
+  m_SizeDelta: {x: 76.789, y: 43.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471517213
 MonoBehaviour:
@@ -1469,7 +1469,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 684c3a3945c34be49a7dc9f97197e695, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
@@ -1661,6 +1661,7 @@ MonoBehaviour:
   script: ZhuaItem
   UIimage: {fileID: 976037705}
   chou: {fileID: 1206644869}
+  blood: {fileID: 1934464621}
 --- !u!4 &478068606
 Transform:
   m_ObjectHideFlags: 0
@@ -1691,6 +1692,7 @@ MonoBehaviour:
   roudian8: {fileID: 886431448}
   UIimage: {fileID: 554060318}
   WinUI: {fileID: 501129118}
+  blood: {fileID: 1400946869}
 --- !u!114 &478068608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1708,6 +1710,7 @@ MonoBehaviour:
   script: ZhuaItem
   UIimage: {fileID: 966823974}
   chou: {fileID: 1206644869}
+  blood: {fileID: 1827507579}
 --- !u!114 &478068609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1725,6 +1728,7 @@ MonoBehaviour:
   script: ZhuaItem
   UIimage: {fileID: 706581735}
   chou: {fileID: 1206644869}
+  blood: {fileID: 708097720}
 --- !u!1 &501129118
 GameObject:
   m_ObjectHideFlags: 0
@@ -6737,7 +6741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271, y: -142}
+  m_AnchoredPosition: {x: 307, y: -148}
   m_SizeDelta: {x: 211.4, y: 133.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554060320
@@ -6895,7 +6899,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271, y: -142}
+  m_AnchoredPosition: {x: -229, y: 83}
   m_SizeDelta: {x: 211.4, y: 133.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &706581737
@@ -6952,7 +6956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &708097721
 Transform:
   m_ObjectHideFlags: 0
@@ -7521,8 +7525,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.6, y: 0.0000023842}
-  m_SizeDelta: {x: 76.789, y: 39.8109}
+  m_AnchoredPosition: {x: 1.6, y: -3.2301}
+  m_SizeDelta: {x: 76.789, y: 46.271}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879597377
 MonoBehaviour:
@@ -7545,7 +7549,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 684c3a3945c34be49a7dc9f97197e695, type: 3}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
@@ -12622,7 +12626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -271, y: -142}
+  m_AnchoredPosition: {x: 238, y: 125}
   m_SizeDelta: {x: 211.4, y: 133.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &976037705
@@ -13885,18 +13889,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pivotPoint: {fileID: 1867312829}
-  rotationSpeed: 30
-  minAngle: -52
+  rotationSpeed: 180
+  minAngle: -90
   maxAngle: 52
   rotationAxis: {x: 0, y: 0, z: 1}
   isRotating: 1
   currentAngle: 0
   moon: {fileID: 431149559}
   sun: {fileID: 56770919}
-  blood1: {fileID: 1400946869}
-  blood2: {fileID: 1934464621}
-  blood3: {fileID: 708097720}
-  blood4: {fileID: 1827507579}
   chou: {fileID: 1206644869}
 --- !u!1 &1389889800
 GameObject:
@@ -13998,7 +13998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1400946870
 Transform:
   m_ObjectHideFlags: 0
@@ -19775,7 +19775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1827507580
 Transform:
   m_ObjectHideFlags: 0
@@ -25053,7 +25053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1934464622
 Transform:
   m_ObjectHideFlags: 0

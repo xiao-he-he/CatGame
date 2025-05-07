@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
+using View.Select;
 
 public class WinControll : MonoBehaviour
 {
@@ -12,13 +13,13 @@ public class WinControll : MonoBehaviour
     [SerializeField] private UnityEvent Lose;
     private void Update()
     {
-        if (Level1Model.Instance.CatModel >= 70f)
+        if (Level1Model.Instance.CatModel >= 20f)
         {
             win();
         }
-        if (Level1Model.Instance.AllTime >= 180f)
+        if (Level1Model.Instance.AllTime >= 150f)
         {
-            if (Level1Model.Instance.CatModel < 70f)
+            if (Level1Model.Instance.CatModel < 20f)
             {
                 lose();
                 
@@ -27,15 +28,18 @@ public class WinControll : MonoBehaviour
     }
     private void lose()
     {
-        Lose.Invoke(); 
+        EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level1/Lose"));
         Level1Model.Instance.AllTime = 0;
         Level1Model.Instance.CatModel = 0;
+        Time.timeScale = 0;
+      
     }
     private void win()
     {
-       
-            winImage.SetActive(true);
-       
+        
+        EndUI.WinUI(Resources.Load<Sprite>("Image/Win/Level1S"));
+        Time.timeScale = 0;
+
     }
    
 }

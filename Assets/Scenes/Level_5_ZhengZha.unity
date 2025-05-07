@@ -911,6 +911,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0598e4464a189704ba26f0bca36c1f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jKeyAnimator: {fileID: 907299073}
+  jKeyAnimation: Animation3
+  dKeyAnimation: Animation1
   targetObject: {fileID: 935047170}
 --- !u!95 &907299073
 Animator:
@@ -1365,6 +1368,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0598e4464a189704ba26f0bca36c1f05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jKeyAnimator: {fileID: 1105526608}
+  jKeyAnimation: Animation4
+  dKeyAnimation: Animation2
   targetObject: {fileID: 935047170}
 --- !u!95 &1105526608
 Animator:

@@ -519,7 +519,7 @@ MonoBehaviour:
   minAngle: -40
   maxAngle: 46
   extendSpeed: 5
-  maxLength: 5.5
+  maxLength: 6
   hiddenRopeLength: 2
   pivotPoint: {fileID: 617844189}
   hook: {fileID: 618113011}
@@ -1414,10 +1414,10 @@ GameObject:
   - component: {fileID: 1816952941}
   - component: {fileID: 1816952940}
   - component: {fileID: 1816952939}
-  - component: {fileID: 1816952943}
   - component: {fileID: 1816952942}
   - component: {fileID: 1816952944}
   - component: {fileID: 1816952945}
+  - component: {fileID: 1816952946}
   m_Layer: 0
   m_Name: "\u732B\u54AA\u8D70\u8DEF1_0"
   m_TagString: Untagged
@@ -1531,32 +1531,6 @@ MonoBehaviour:
   fixedZPosition: 0
   acceleration: 0.5
   maxSpeed: 10
---- !u!61 &1816952943
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1816952938}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.35, y: 2.27}
-    newSize: {x: 2.35, y: 2.27}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.35, y: 2.27}
-  m_EdgeRadius: 0
 --- !u!114 &1816952944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1590,6 +1564,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &1816952946
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816952938}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.032684565, y: -0.4793799}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.35, y: 2.27}
+    newSize: {x: 2.35, y: 2.27}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.3282132, y: 0.57037973}
+  m_EdgeRadius: 0
 --- !u!1001 &1825475128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1600,6 +1600,10 @@ PrefabInstance:
     - target: {fileID: 55082082320828074, guid: 1a8251c6486aed24585948609c2b4afc, type: 3}
       propertyPath: m_Name
       value: Lose (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 55082082320828074, guid: 1a8251c6486aed24585948609c2b4afc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 55082082320828077, guid: 1a8251c6486aed24585948609c2b4afc, type: 3}
       propertyPath: m_Pivot.x

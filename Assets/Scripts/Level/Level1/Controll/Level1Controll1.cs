@@ -38,9 +38,7 @@ public class Level1Controll1 : MonoBehaviour
            
             while (Level1Model.Instance.time < stage.duration)
             {
-                // 等待间隔时间
-                yield return new WaitForSeconds(5);
-
+               
                 // 随机选择对象
                 List<GameObject> selected = GetRandomObjects(stage.objectsToShow);
 
@@ -48,6 +46,7 @@ public class Level1Controll1 : MonoBehaviour
                 StartCoroutine(ShowAndHide(selected, stage.visibleDuration));
 
                 Level1Model.Instance.time += 5;
+                yield return new WaitForSeconds(5);
             }
         }
     }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using View.Select;
 
 public class RopeItem : BaseItem
 {
@@ -184,7 +185,7 @@ public class RopeItem : BaseItem
         {
             if (LoseUI != null)
             {
-                LoseUI.SetActive(true);
+                EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level6/Wrong"));
             }
         }
     }

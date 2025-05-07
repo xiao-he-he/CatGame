@@ -15,14 +15,10 @@ public class fishingItem : MonoBehaviour
         {
             Debug.Log("½øÈë");
 
-            SceneManager.LoadScene(9);
+            SceneManager.LoadScene("Level_6 1");
             Time.timeScale = 0f;
         }
     }
 
-    public void Win()
-    {
-        SceneManager.LoadScene(0);
-    }
    
 }

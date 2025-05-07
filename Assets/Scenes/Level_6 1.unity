@@ -3197,7 +3197,7 @@ RectTransform:
   m_Children:
   - {fileID: 1111767028}
   - {fileID: 1197413588}
-  - {fileID: 1463937156}
+  - {fileID: 1367648841}
   m_Father: {fileID: 406895149}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5818,6 +5818,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 856786173}
     m_Modifications:
+    - target: {fileID: 317233235027249138, guid: a80298ff93b452a4783f5b72e2b1e0db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 317233235027249139, guid: a80298ff93b452a4783f5b72e2b1e0db, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8623567920761190541, guid: a80298ff93b452a4783f5b72e2b1e0db, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5920,6 +5928,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a80298ff93b452a4783f5b72e2b1e0db, type: 3}
+--- !u!224 &1367648841 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 317233235027249139, guid: a80298ff93b452a4783f5b72e2b1e0db, type: 3}
+  m_PrefabInstance: {fileID: 1367648840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1370228563
 GameObject:
   m_ObjectHideFlags: 0
@@ -6544,16 +6557,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1463937155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8623567920761190642, guid: a80298ff93b452a4783f5b72e2b1e0db, type: 3}
-  m_PrefabInstance: {fileID: 1367648840}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1463937156 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8623567920761190541, guid: a80298ff93b452a4783f5b72e2b1e0db, type: 3}
-  m_PrefabInstance: {fileID: 1367648840}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1468762106
 GameObject:
   m_ObjectHideFlags: 0
@@ -8716,7 +8719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Time: 1
-  WinUI: {fileID: 1463937155}
+  WinUI: {fileID: 0}
   Cat: {fileID: 1109201661}
   checkDelay: 5
 --- !u!1 &1941416578
@@ -10017,6 +10020,10 @@ PrefabInstance:
     - target: {fileID: 55082082320828074, guid: 1a8251c6486aed24585948609c2b4afc, type: 3}
       propertyPath: m_Name
       value: Lose (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 55082082320828074, guid: 1a8251c6486aed24585948609c2b4afc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 55082082320828077, guid: 1a8251c6486aed24585948609c2b4afc, type: 3}
       propertyPath: m_Pivot.x

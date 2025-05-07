@@ -5,6 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using View.Select;
 
 public class Level5Controll2 : MonoBehaviour
 {
@@ -13,10 +14,18 @@ public class Level5Controll2 : MonoBehaviour
     public string script;
     public GameObject UIimage;
     public GameObject chou;
-
+    public GameObject blood;
+    private void Update()
+    {
+        if (roudian6.transform.position.x >= 0.065f && Level5Model.Instance.isSun)
+        {
+            blood.SetActive(true);
+        }
+    }
     public void judge2()
     {
         UIimage.SetActive(false);
+        blood.SetActive(false);
         if (roudian6.transform.position.x <= Level5Model.Instance.xLimitMax2 && roudian6.transform.position.x >= Level5Model.Instance.xLimitMin2)
 
         {
@@ -25,9 +34,13 @@ public class Level5Controll2 : MonoBehaviour
             chou.SetActive(true);
            
         }
+        else if(roudian6.transform.position.x > Level5Model.Instance.xLimitMax2)
+        {
+            SceneManager.LoadScene("Level_5_ZhengZha");
+        }
         else
         {
-            SceneManager.LoadScene(6);
+            EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level5/Hurt"));
         }
     }
    
