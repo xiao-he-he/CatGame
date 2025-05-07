@@ -11,9 +11,5 @@ namespace Level.Level3.Item
             c.UseDownDoor(gameObject);
         }
         
-
-        public override void OnPointerEnter(PointerEventData eventData) => throw new System.NotImplementedException();
-
-        public override void OnPointerExit(PointerEventData eventData) => throw new System.NotImplementedException();
     }
 }

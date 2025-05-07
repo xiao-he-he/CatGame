@@ -4,6 +4,7 @@ using Cysharp.Threading.Tasks;
 using Level.Contronal;
 using Level.Level4.Model;
 using UnityEngine;
+using View.Select;
 
 namespace Level.Level4.Controll
 {
@@ -48,7 +49,7 @@ namespace Level.Level4.Controll
             Cat.SetActive(true);
             Cat.GetComponent<SpriteRenderer>().color = Color.red;
             await UniTask.WaitForSeconds(0.5f);
-            FireFaill.SetActive(true);
+            EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level4/Fire"));
         }
 
         public void OpenDownFire()
@@ -200,6 +201,10 @@ namespace Level.Level4.Controll
                     pot_3.SetActive(false);
                     _model.PotPos--;
                 }
+                else
+                {
+                    EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level4/Hot"));
+                }
                 
             }
            
@@ -217,7 +222,7 @@ namespace Level.Level4.Controll
             //PotCover.SetActive(_model.OpenFireDown);
         }
 
-        public void UseClip()
+        public async void UseClip()
         {
             if (_model.HasPutCan&&_model.OpenPingPot)
             {
@@ -225,6 +230,8 @@ namespace Level.Level4.Controll
                 PotCover.SetActive(false);
                 SuccessChilp.SetActive(true);
                 //播放结束动画
+                await UniTask.WaitForSeconds(4f);
+                EndUI.WinUI(Resources.Load<Sprite>("Image/Win/Level4S"));
             }
         }
 
@@ -242,7 +249,8 @@ namespace Level.Level4.Controll
             try {
                 await UniTask.WaitForSeconds(3, cancellationToken: ct);
                 Debug.Log("游戏失败");
-                WaterFall.SetActive(true);
+                EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level4/Water"));
+                //WaterFall.SetActive(true);
                 await UniTask.WaitForSeconds(1);
                 //重新开始
             } catch (OperationCanceledException) {

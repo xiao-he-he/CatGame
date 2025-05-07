@@ -11,9 +11,6 @@ namespace Level.Level3.Item
             var c = _controller as Level3Controller;
             c.UseE();
         }
-
-        public override void OnPointerEnter(PointerEventData eventData) => throw new System.NotImplementedException();
-
-        public override void OnPointerExit(PointerEventData eventData) => throw new System.NotImplementedException();
+        
     }
 }
