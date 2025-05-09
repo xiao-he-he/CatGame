@@ -1,9 +1,10 @@
-﻿namespace Level.Model
+﻿using System;
+
+namespace Level.Model
 {
     public abstract class BaseLevelModel<T> where T:BaseLevelModel<T>,new()
     {
         protected static BaseLevelModel<T> _instance;
-
         public static T Instance
         {
             get
@@ -14,6 +15,11 @@
                 }
                 return (_instance as T);
             }
+        }
+
+        public static void ClearModel()
+        {
+            _instance = null;
         }
     }
 }
