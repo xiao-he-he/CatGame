@@ -1,6 +1,9 @@
-﻿using Level.Contronal;
+﻿using Cysharp.Threading.Tasks;
+using Level.Contronal;
 using Level.Level3.Model;
 using UnityEngine;
+using View;
+using EndUI = View.Select.EndUI;
 
 namespace Level.Level3.Controll
 {
@@ -9,11 +12,15 @@ namespace Level.Level3.Controll
         private Level3Model _model = Level3Model.Instance;
         [SerializeField] private GameObject OpenE, CloseE;
         public GameObject WMUp,WMDown;
+        public GameObject cat,CatRun;
 
-        public void CatMove(GameObject cat)
+        public async void CatMove()
         {
             if (_model.DownIsOpen && _model.UpIsOpen)
             {
+                CatRun.SetActive(true);
+                cat.SetActive(false);
+                await UniTask.WaitForSeconds(0.1f);
                 if (_model.CatInUp)
                 {
                     cat.transform.position -= new Vector3(0,4,0);
@@ -22,8 +29,9 @@ namespace Level.Level3.Controll
                 {
                     cat.transform.position += new Vector3(0,4,0);
                 }
-
                 _model.CatInUp = !_model.CatInUp;
+                CatRun.SetActive(false);
+                cat.SetActive(true);
             }
         }
 
@@ -84,7 +92,7 @@ namespace Level.Level3.Controll
             }
         }
 
-        public void UseUpWM()
+        public async void UseUpWM()
         {
             if (_model.HasElectricity)
             {
@@ -92,6 +100,22 @@ namespace Level.Level3.Controll
                 if (_model.UpIsUse)
                 {
                     WMUp.SetActive(true);
+                    
+                    if (!_model.UpIsOpen)
+                    {
+                        await UniTask.WaitForSeconds(0.5f);
+                        EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level3D"));
+                        return;
+                    }
+                    if (_model.DownIsUes||!_model.DownIsOpen)
+                    {
+                        await UniTask.WaitForSeconds(0.5f);
+                        EndUI.WinUI(Resources.Load<Sprite>("Image/Win/Level3S"));
+                    }
+                    else if(_model.CatInUp)
+                    {
+                        CatMove();
+                    }
                 }
                 else
                 {
@@ -100,7 +124,7 @@ namespace Level.Level3.Controll
             }
         }
         
-        public void UseDownWM()
+        public async void UseDownWM()
         {
             if (_model.HasElectricity)
             {
@@ -108,6 +132,21 @@ namespace Level.Level3.Controll
                 if (_model.DownIsUes)
                 {
                     WMDown.SetActive(true);
+                    if (!_model.DownIsOpen)
+                    {
+                        await UniTask.WaitForSeconds(0.5f);
+                        EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level3D"));
+                        return;
+                    }
+                    if (_model.UpIsUse||!_model.UpIsOpen)
+                    {
+                        await UniTask.WaitForSeconds(0.5f);
+                        EndUI.WinUI(Resources.Load<Sprite>("Image/Win/Level3S"));
+                    }
+                    else if(!_model.CatInUp)
+                    {
+                        CatMove();
+                    }
                 }
                 else
                 {

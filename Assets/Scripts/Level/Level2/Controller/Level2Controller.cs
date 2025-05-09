@@ -5,6 +5,7 @@ using Level.Model;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 namespace Level.Contronal
 {
@@ -74,7 +75,7 @@ namespace Level.Contronal
         {
             if (_model.IsOpenLight && _model.IsOpenLamp)
             {
-                //开始游戏的逻辑
+                SceneManager.LoadScene("Level2-wakeup");
                 return;
             }
             Debug.LogWarning("还没有开所有的灯");

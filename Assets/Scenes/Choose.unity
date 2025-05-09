@@ -212,7 +212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ffdd2e7d324c340850deadae38049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: Level_2
+  TSlider: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!1 &192566399
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +334,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ffdd2e7d324c340850deadae38049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 
+  TSlider: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!114 &357694384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,7 +726,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ffdd2e7d324c340850deadae38049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: Level_4
+  TSlider: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!1 &1231872183
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,7 +916,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ffdd2e7d324c340850deadae38049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: Level_7
+  TSlider: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!1 &1447032881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,7 +1084,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ffdd2e7d324c340850deadae38049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 
+  TSlider: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!1 &1498585334
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1257,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ffdd2e7d324c340850deadae38049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: Level_5
+  TSlider: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!1 &1814655733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1337,7 +1349,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ffdd2e7d324c340850deadae38049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: Level_3
+  TSlider: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!1 &1966242379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,7 +1441,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ffdd2e7d324c340850deadae38049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: Level_6
+  TSlider: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!1 &2006604132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,4 +1533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17ffdd2e7d324c340850deadae38049f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: Level_1
+  TSlider: {fileID: 0}
+  ui: {fileID: 0}

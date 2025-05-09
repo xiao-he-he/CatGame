@@ -9,7 +9,7 @@ namespace Level.Level3.Item
         public override void OnPointerClick(PointerEventData eventData)
         {
             var c = _controller as Level3Controller;
-            c.CatMove(gameObject);
+            c.CatMove();
         }
         
     }
