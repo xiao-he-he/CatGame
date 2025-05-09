@@ -13,6 +13,7 @@ namespace Level.Level3.Controll
         [SerializeField] private GameObject OpenE, CloseE;
         public GameObject WMUp,WMDown;
         public GameObject cat,CatRun;
+        public GameObject WaterUp,WaterDowm;
 
         public async void CatMove()
         {
@@ -99,9 +100,12 @@ namespace Level.Level3.Controll
                 _model.UpIsUse = !_model.UpIsUse;
                 if (_model.UpIsUse)
                 {
+                    WaterUp.SetActive(true);
+                    await UniTask.WaitForSeconds(0.4f);
+                    WaterUp.SetActive(false);
                     WMUp.SetActive(true);
                     
-                    if (!_model.UpIsOpen)
+                    if (!_model.UpIsOpen&&_model.CatInUp)
                     {
                         await UniTask.WaitForSeconds(0.5f);
                         EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level3D"));
@@ -131,8 +135,11 @@ namespace Level.Level3.Controll
                 _model.DownIsUes = !_model.DownIsUes;
                 if (_model.DownIsUes)
                 {
+                    WaterDowm.SetActive(true);
+                    await UniTask.WaitForSeconds(0.4f);
+                    WaterDowm.SetActive(false);
                     WMDown.SetActive(true);
-                    if (!_model.DownIsOpen)
+                    if (!_model.DownIsOpen&&!_model.CatInUp)
                     {
                         await UniTask.WaitForSeconds(0.5f);
                         EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level3D"));
