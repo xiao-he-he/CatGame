@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using View.Select;
 using wakeupmodel;
 
 public class WinOrLose : MonoBehaviour
@@ -30,18 +31,18 @@ public class WinOrLose : MonoBehaviour
         
         if (WakeUpModel.Instance.ComfotableTime >= 30f)
         {
-            Win();
+            EndUI.WinUI(Resources.Load<Sprite>("Image/Win/Level2S"));
             Time.timeScale = 0f;
 
         }
         if (WakeUpModel.Instance.SleepTime >= 15f)
         {
-            Sleep();
+            EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level2/Sleep"));
             Time.timeScale = 0f;
         }
         if (WakeUpModel.Instance.AngryTime >= 15f)
         {
-            Angry();
+            EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level2/Angry"));
             Time.timeScale = 0f;
         }
 

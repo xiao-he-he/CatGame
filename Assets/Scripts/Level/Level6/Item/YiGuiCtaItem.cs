@@ -13,7 +13,7 @@ public class YiGuiCtaItem : MonoBehaviour
         GameObject object3 = GameObject.FindGameObjectWithTag(triggerTag);
         if (other.gameObject == object3)
         {
-            SceneManager.LoadScene(8);       
+            SceneManager.LoadScene("Level6-fishing");       
         }
     }
 }

@@ -11,4 +11,5 @@ public class Level6Model : BaseLevelModel<Level6Model>
     public int MusicMode3 = 0;   
     public int MusicMode4 = 0;
     public bool IsDoor;
+    public int MissMusic = 0;
 }

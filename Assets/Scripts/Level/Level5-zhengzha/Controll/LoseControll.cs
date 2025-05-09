@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using View.Select;
 
 public class LoseControll : MonoBehaviour
 {
@@ -26,14 +27,14 @@ public class LoseControll : MonoBehaviour
             if (scaleX <= 0.02f)
             {
                 Time.timeScale = 0f;
-                SceneManager.LoadScene(5);
+                SceneManager.LoadScene("Level_5");
                 Time.timeScale = 1f;
 
             }
         }
         else
         {
-            LoseUI.SetActive(true);
+            EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level5/Hurt"));
         }
         
     }

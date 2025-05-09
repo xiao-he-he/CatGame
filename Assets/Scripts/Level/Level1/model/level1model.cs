@@ -9,6 +9,7 @@ namespace level1model
         public  float CatModel = 0f;
         public  float time = 0f;
         public float AllTime = Time.deltaTime;
+        public float Timing;
         
     } 
     

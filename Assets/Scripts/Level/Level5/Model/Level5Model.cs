@@ -21,4 +21,5 @@ public class Level5Model : BaseLevelModel<Level5Model>
     public float xLimitMin4= -0.20f;
     public float yLimitMax4 = 0f;
     public float yLimitMin4 = 0f;
+    public bool isSun;
 }

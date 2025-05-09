@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using View.Select;
 
 public class Level6WinControll : MonoBehaviour
 {
@@ -40,25 +41,16 @@ public class Level6WinControll : MonoBehaviour
 
     private void ShowWinUI()
     {
-        if (WinUI != null)
-        {
-            WinUI.SetActive(true);
-        }
-        if (Cat != null)
-        {
-            Cat.SetActive(false);
-        }
+
+        EndUI.WinUI(Resources.Load<Sprite>("Image/Win/Level6S"));
+
+
     }
 
     private void ShowCat()
     {
-        if (Cat != null)
-        {
             Cat.SetActive(true);
-        }
-        if (WinUI != null)
-        {
-            WinUI.SetActive(false);
-        }
+
+        
     }
 }
