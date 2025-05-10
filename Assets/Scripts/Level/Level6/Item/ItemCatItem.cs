@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using View.Select;
@@ -10,14 +8,14 @@ public class ItemCatItem : Level5BaseItem
     private Vector3 offset;
     private Collider2D targetArea;
     private bool isInTargetArea = false;
-    private float fixedZPosition; // ´æ´¢¹Ì¶¨µÄZ×ø±ê
+    private float fixedZPosition; // ï¿½æ´¢ï¿½Ì¶ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½ï¿½
     public GameObject DouMaoBang;
     public GameObject LoseUI;
     public GameObject targetZone; 
 
     private void Start()
     {
-        fixedZPosition = transform.position.z; // ³õÊ¼»¯Ê±±£´æZ×ø±ê
+        fixedZPosition = transform.position.z; // ï¿½ï¿½Ê¼ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½ï¿½
         
         if (targetZone != null)
         {
@@ -27,17 +25,17 @@ public class ItemCatItem : Level5BaseItem
 
     public override void OnPointerClick(PointerEventData eventData)
     {
-        // µã»÷Âß¼­
+        // ï¿½ï¿½ï¿½ï¿½ß¼ï¿½
     }
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
-        // Êó±ê½øÈëÂß¼­
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½
     }
 
     public override void OnPointerExit(PointerEventData eventData)
     {
-        // Êó±êÀë¿ªÂß¼­
+        // ï¿½ï¿½ï¿½ï¿½ë¿ªï¿½ß¼ï¿½
     }
 
     protected override void OnHold(float HoldTime)
@@ -45,7 +43,7 @@ public class ItemCatItem : Level5BaseItem
         if (!isDragging)
         {
             isDragging = true;
-            // »ñÈ¡Êó±êÎ»ÖÃ²¢¹Ì¶¨Z×ø±ê
+            // ï¿½ï¿½È¡ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½Ì¶ï¿½Zï¿½ï¿½ï¿½ï¿½
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = fixedZPosition;
             offset = transform.position - mousePosition;
@@ -56,7 +54,7 @@ public class ItemCatItem : Level5BaseItem
     {
         if (isDragging)
         {
-            // »ñÈ¡Êó±êÎ»ÖÃ²¢¹Ì¶¨Z×ø±ê
+            // ï¿½ï¿½È¡ï¿½ï¿½ï¿½Î»ï¿½Ã²ï¿½ï¿½Ì¶ï¿½Zï¿½ï¿½ï¿½ï¿½
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = fixedZPosition;
             transform.position = mousePosition + offset;

@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,10 +11,10 @@ public class fishingItem : MonoBehaviour
         GameObject object3 = GameObject.FindGameObjectWithTag("Hook");
         if (other.gameObject == object3)
         {
-            Debug.Log("½øÈë");
+            Debug.Log("ï¿½ï¿½ï¿½ï¿½");
 
             SceneManager.LoadScene("Level_6 1");
-            Time.timeScale = 0f;
+           
         }
     }
 

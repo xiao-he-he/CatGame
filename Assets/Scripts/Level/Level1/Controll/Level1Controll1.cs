@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using level1model;
-using UnityEditor;
+
 using UnityEngine;
 
 public class Level1Controll1 : MonoBehaviour

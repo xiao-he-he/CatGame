@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
@@ -55,7 +54,7 @@ public class Level5Controll4 : MonoBehaviour
         if (File.Exists(path))
         {
             File.Delete(path);
-            Debug.Log("¾ÉµÄ Level 5 ´æµµÒÑÉ¾³ý£¬×¼±¸³õÊ¼»¯¡£");
+            Debug.Log("ï¿½Éµï¿½ Level 5 ï¿½æµµï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½");
         }
     }
 }

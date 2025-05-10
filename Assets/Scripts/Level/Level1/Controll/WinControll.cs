@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using level1model;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Rendering.Universal;
-using UnityEngine.UI;
 using View.Select;
 
 public class WinControll : MonoBehaviour
@@ -31,14 +27,11 @@ public class WinControll : MonoBehaviour
         EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level1/Lose"));
         Level1Model.Instance.AllTime = 0;
         Level1Model.Instance.CatModel = 0;
-        Time.timeScale = 0;
-      
     }
     private void win()
     {
         
         EndUI.WinUI(Resources.Load<Sprite>("Image/Win/Level1S"));
-        Time.timeScale = 0;
 
     }
    

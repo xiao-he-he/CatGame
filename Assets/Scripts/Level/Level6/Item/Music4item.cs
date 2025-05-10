@@ -1,18 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Music4item : BaseItem
 {
     public AudioSource timerAudio;
-    public float startY;       // ÆðµãY×ø±ê
-    public float endY;        // ÖÕµãY×ø±ê
+    public float startY;       // ï¿½ï¿½ï¿½Yï¿½ï¿½ï¿½ï¿½
+    public float endY;        // ï¿½Õµï¿½Yï¿½ï¿½ï¿½ï¿½
     private bool movementStarted = false;
     private bool lerpCompleted = false;
     private float movementStartTime;
     public float TIME = 40f;
-    private float fallSpeed;   // ¼ÆËã³öµÄÏÂÂäËÙ¶È
+    private float fallSpeed;   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½
     private const float COOLDOWN_DURATION = 0.02f;
     private bool isOnCooldown = false;
     void Start()
@@ -22,8 +21,8 @@ public class Music4item : BaseItem
             startY,
             transform.position.z
         );
-        // ¼ÆËã¹Ì¶¨ËÙ¶È£º(¾àÀë)/Ê±¼ä
-        fallSpeed = (startY - endY) / 1f; // 1ÃëÒÆ¶¯Ê±¼ä
+        // ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½Ù¶È£ï¿½(ï¿½ï¿½ï¿½ï¿½)/Ê±ï¿½ï¿½
+        fallSpeed = (startY - endY) / 1f; // 1ï¿½ï¿½ï¿½Æ¶ï¿½Ê±ï¿½ï¿½
     }
 
     void Update()
@@ -38,7 +37,7 @@ public class Music4item : BaseItem
         {
             if (!lerpCompleted)
             {
-                // µÚÒ»½×¶Î£ºLerpÒÆ¶¯
+                // ï¿½ï¿½Ò»ï¿½×¶Î£ï¿½Lerpï¿½Æ¶ï¿½
                 float progress = Mathf.Clamp01((timerAudio.time - movementStartTime) / 2f);
                 float newY = Mathf.Lerp(startY, endY, progress);
                 transform.position = new Vector3(
@@ -54,7 +53,7 @@ public class Music4item : BaseItem
             }
             else
             {
-                // µÚ¶þ½×¶Î£ºÔÈËÙÏÂÂä
+                // ï¿½Ú¶ï¿½ï¿½×¶Î£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 float newY = transform.position.y - fallSpeed * Time.deltaTime;
                 transform.position = new Vector3(
                     transform.position.x,
@@ -123,8 +122,8 @@ public class Music4item : BaseItem
     }
     IEnumerator CooldownCoroutine()
     {
-        isOnCooldown = true; // ½øÈëÀäÈ´×´Ì¬
-        yield return new WaitForSeconds(COOLDOWN_DURATION); // µÈ´ýÀäÈ´Ê±¼ä
-        isOnCooldown = false; // ÀäÈ´½áÊø
+        isOnCooldown = true; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È´×´Ì¬
+        yield return new WaitForSeconds(COOLDOWN_DURATION); // ï¿½È´ï¿½ï¿½ï¿½È´Ê±ï¿½ï¿½
+        isOnCooldown = false; // ï¿½ï¿½È´ï¿½ï¿½ï¿½ï¿½
     }
 }

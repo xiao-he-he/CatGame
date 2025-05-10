@@ -32,18 +32,18 @@ public class WinOrLose : MonoBehaviour
         if (WakeUpModel.Instance.ComfotableTime >= 30f)
         {
             EndUI.WinUI(Resources.Load<Sprite>("Image/Win/Level2S"));
-            Time.timeScale = 0f;
+            
 
         }
         if (WakeUpModel.Instance.SleepTime >= 15f)
         {
             EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level2/Sleep"));
-            Time.timeScale = 0f;
+            
         }
         if (WakeUpModel.Instance.AngryTime >= 15f)
         {
             EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level2/Angry"));
-            Time.timeScale = 0f;
+            
         }
 
     }

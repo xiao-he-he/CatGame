@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -10,7 +8,7 @@ public class DouMaoBangItem : Level5BaseItem
     private Vector3 offset;
     private Collider2D targetArea;
     private bool isInTargetArea = false;
-    private float fixedZPosition; // 存储固定的Z坐标
+    private float fixedZPosition; // ?洢?????Z????
 
 
     public GameObject targetZone;
@@ -18,8 +16,8 @@ public class DouMaoBangItem : Level5BaseItem
 
     private void Start()
     {
-        fixedZPosition = transform.position.z; // 初始化时保存Z坐标
-        initialPosition = transform.position;  // 保存初始位置
+        fixedZPosition = transform.position.z; // ??????????Z????
+        initialPosition = transform.position;  // ??????λ??
 
         if (targetZone != null)
         {
@@ -27,28 +25,28 @@ public class DouMaoBangItem : Level5BaseItem
 
             if (targetArea == null)
             {
-                Debug.LogError("目标区域缺少 Collider2D 组件！");
+                Debug.LogError("?????????? Collider2D ?????");
             }
         }
         else
         {
-            Debug.LogError("targetZone 未赋值！");
+            Debug.LogError("targetZone δ?????");
         }
     }
 
     public override void OnPointerClick(PointerEventData eventData)
     {
-        // 点击逻辑
+        // ??????
     }
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
-        // 鼠标进入逻辑
+        // ?????????
     }
 
     public override void OnPointerExit(PointerEventData eventData)
     {
-        // 鼠标离开逻辑
+        // ????????
     }
 
     protected override void OnHold(float HoldTime)
@@ -56,7 +54,7 @@ public class DouMaoBangItem : Level5BaseItem
         if (!isDragging)
         {
             isDragging = true;
-            // 获取鼠标位置并固定Z坐标
+            // ??????λ?ò????Z????
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = fixedZPosition;
             offset = transform.position - mousePosition;
@@ -67,7 +65,7 @@ public class DouMaoBangItem : Level5BaseItem
     {
         if (isDragging)
         {
-            // 获取鼠标位置并固定Z坐标
+            // ??????λ?ò????Z????
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = fixedZPosition;
             transform.position = mousePosition + offset;
@@ -94,7 +92,7 @@ public class DouMaoBangItem : Level5BaseItem
         }
         else
         {
-            Debug.Log("未进入目标区域，回到原位置。");
+            Debug.Log("δ??????????????λ?á?");
             transform.position = initialPosition;
 
           

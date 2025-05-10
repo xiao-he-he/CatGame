@@ -1,12 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 using Slider = UnityEngine.UI.Slider;
 
 public class CardSelect : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPointerDownHandler

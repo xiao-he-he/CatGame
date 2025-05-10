@@ -26,10 +26,7 @@ public class LoseControll : MonoBehaviour
 
             if (scaleX <= 0.02f)
             {
-                Time.timeScale = 0f;
                 SceneManager.LoadScene("Level_5");
-                Time.timeScale = 1f;
-
             }
         }
         else
@@ -54,7 +51,7 @@ public class LoseControll : MonoBehaviour
         if (File.Exists(path))
         {
             File.Delete(path);
-            Debug.Log("¾ÉµÄ Level 5 ´æµµÒÑÉ¾³ý£¬×¼±¸³õÊ¼»¯¡£");
+            Debug.Log("ï¿½Éµï¿½ Level 5 ï¿½æµµï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½×¼ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½");
         }
     }
 

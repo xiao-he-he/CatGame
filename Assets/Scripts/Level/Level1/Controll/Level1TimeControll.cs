@@ -1,47 +1,46 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using level1model;
 using UnityEngine;
 using UnityEngine.UI;
 public class Level1TimeControll : MonoBehaviour
 {
-    public Text timeText;       // ÓÃÓÚÏÔÊ¾Ê±¼äµÄText×é¼þ
-    public Text catCountText;   // ÓÃÓÚÏÔÊ¾Ã¨ÊýÁ¿µÄText×é¼þ
-    public float initialTime = 180f; // ³õÊ¼Ê±¼ä£¨3·ÖÖÓ=180Ãë£©
+    public Text timeText;       // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Ê±ï¿½ï¿½ï¿½Textï¿½ï¿½ï¿½
+    public Text catCountText;   // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Ã¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Textï¿½ï¿½ï¿½
+    public float initialTime = 180f; // ï¿½ï¿½Ê¼Ê±ï¿½ä£¨3ï¿½ï¿½ï¿½ï¿½=180ï¿½ë£©
   
 
     void Start()
     {
-        // ³õÊ¼»¯Ê£ÓàÊ±¼ä
+        // ï¿½ï¿½Ê¼ï¿½ï¿½Ê£ï¿½ï¿½Ê±ï¿½ï¿½
         Level1Model.Instance.Timing = initialTime;
     }
 
     void Update()
     { 
 
-        // ¸üÐÂµ¹¼ÆÊ±
+        // ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½Ê±
         UpdateCountdown();
 
-        // ¸üÐÂÊ±¼äÏÔÊ¾£¨¸ñÊ½»¯Îª·ÖÖÓ:ÃëÖÓ£©
+        // ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½:ï¿½ï¿½ï¿½Ó£ï¿½
         UpdateTimeDisplay();
 
-        // ¸üÐÂÃ¨ÊýÁ¿ÏÔÊ¾
+        // ï¿½ï¿½ï¿½ï¿½Ã¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
         UpdateCatCountDisplay();
     }
 
     void UpdateCountdown()
     {
-        // Ö»ÔÚÊ±¼äÎ´½áÊøÊ±µ¹¼ÆÊ±
+        // Ö»ï¿½ï¿½Ê±ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ê±
         if (Level1Model.Instance.Timing > 0)
         {
-            // ¼õÈ¥Ö¡Ê±¼ä
+            // ï¿½ï¿½È¥Ö¡Ê±ï¿½ï¿½
             Level1Model.Instance.Timing -= Time.deltaTime;
 
-            // È·±£Ê±¼ä²»Ð¡ÓÚ0
+            // È·ï¿½ï¿½Ê±ï¿½ä²»Ð¡ï¿½ï¿½0
             Level1Model.Instance.Timing = Mathf.Max(0, Level1Model.Instance.Timing);
 
            
-            // ¿ÉÑ¡£ºÊ±¼ä½áÊøÊ±µÄ´¦Àí
+            // ï¿½ï¿½Ñ¡ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Ä´ï¿½ï¿½ï¿½
             if (Level1Model.Instance.Timing <= 0)
             {
                 TimeExpired();
@@ -51,21 +50,21 @@ public class Level1TimeControll : MonoBehaviour
 
     void TimeExpired()
     {
-        // Ê±¼ä½áÊøÊ±µÄÂß¼­
-        Debug.Log("Ê±¼äµ½£¡");
-        // ÕâÀï¿ÉÒÔÌí¼ÓÓÎÏ·½áÊø»òÆäËûÂß¼­
+        // Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ß¼ï¿½
+        Debug.Log("Ê±ï¿½äµ½ï¿½ï¿½");
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½
     }
 
     void UpdateTimeDisplay()
     {
-        // ¼ÆËã·ÖÖÓºÍÃëÖÓ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óºï¿½ï¿½ï¿½ï¿½ï¿½
         int minutes = Mathf.FloorToInt(Level1Model.Instance.Timing / 60f);
         int seconds = Mathf.FloorToInt(Level1Model.Instance.Timing % 60f);
 
-        // ¸ñÊ½»¯ÎªÁ½Î»ÊýÏÔÊ¾£¨Èç01:05£©
+        // ï¿½ï¿½Ê½ï¿½ï¿½Îªï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½01:05ï¿½ï¿½
         string timeString = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-        // ¸üÐÂText×é¼þ
+        // ï¿½ï¿½ï¿½ï¿½Textï¿½ï¿½ï¿½
         if (timeText != null)
         {
             timeText.text = timeString;
@@ -76,12 +75,12 @@ public class Level1TimeControll : MonoBehaviour
     {
         if (catCountText != null)
         {
-            // ÏÔÊ¾Ã¨ÊýÁ¿£¨Èç"15/20"£©
+            // ï¿½ï¿½Ê¾Ã¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"15/20"ï¿½ï¿½
             catCountText.text = Level1Model.Instance.CatModel + "/20";
         }
     }
 
-    // ¿ÉÑ¡£ºÌí¼ÓÊ±¼äµÄ·½·¨
+    // ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ä·ï¿½ï¿½ï¿½
     public void AddTime(float secondsToAdd)
     {
         Level1Model.Instance.Timing += secondsToAdd;

@@ -1,14 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using View.Select;
 
 public class Level6WinControll : MonoBehaviour
 {
     public bool Time = true;
-    public GameObject WinUI;    // Ê¤ÀûÊ±ÏÔÊ¾µÄUIÎïÌå
-    public GameObject Cat;      // Ê§°ÜÊ±ÏÔÊ¾µÄÃ¨ÎïÌå
-    public float checkDelay = 5f; // ¼ì²âÑÓ³ÙÊ±¼ä(Ãë)
+    public GameObject WinUI;    // Ê¤ï¿½ï¿½Ê±ï¿½ï¿½Ê¾ï¿½ï¿½UIï¿½ï¿½ï¿½ï¿½
+    public GameObject Cat;      // Ê§ï¿½ï¿½Ê±ï¿½ï¿½Ê¾ï¿½ï¿½Ã¨ï¿½ï¿½ï¿½ï¿½
+    public float checkDelay = 5f; // ï¿½ï¿½ï¿½ï¿½Ó³ï¿½Ê±ï¿½ï¿½(ï¿½ï¿½)
 
     private void Start()
     {
@@ -23,10 +22,10 @@ public class Level6WinControll : MonoBehaviour
     }
     private IEnumerator CheckDoorStatusAfterDelay()
     {
-        // µÈ´ýÖ¸¶¨Ê±¼ä
+        // ï¿½È´ï¿½Ö¸ï¿½ï¿½Ê±ï¿½ï¿½
         yield return new WaitForSeconds(checkDelay);
 
-        // ¼ì²éÃÅ×´Ì¬
+        // ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬
 
         
         if(Level6Model.Instance.IsDoor== false)

@@ -1,5 +1,4 @@
 ﻿using Level.Level3.Controll;
-using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Level.Level3.Item

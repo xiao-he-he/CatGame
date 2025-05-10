@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Level.Contronal;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -40,7 +38,7 @@ public abstract class Level5BaseItem : MonoBehaviour,
 
     public virtual void OnRelease()
     {
-        // »ùÀàÄ¬ÈÏÂß¼­£¨¿ÉÒÔÊÇ¿ÕµÄ£©
+        // ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ß¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ÕµÄ£ï¿½
     }
     public virtual void OnPointerUp(PointerEventData eventData)
     {

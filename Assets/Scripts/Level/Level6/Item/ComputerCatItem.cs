@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -13,8 +12,8 @@ public class ComputerCatItem : BaseItem
     public GameObject ComCatItem;
     private bool isPlaying = false;
 
-    // Combo ÏÔÊ¾Ïà¹Ø±äÁ¿
-    public Text comboText; // ÓÃÓÚÏÔÊ¾ Combo µÄ UI Text ×é¼þ
+    // Combo ï¿½ï¿½Ê¾ï¿½ï¿½Ø±ï¿½ï¿½ï¿½
+    public Text comboText; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ Combo ï¿½ï¿½ UI Text ï¿½ï¿½ï¿½
 
     public override void OnPointerClick(PointerEventData eventData)
     {
@@ -33,7 +32,7 @@ public class ComputerCatItem : BaseItem
         {
             Level6Model.Instance.MusicModel = 0;
             Level6Model.Instance.MissMusic = 0;
-            UpdateComboDisplay(); // Á¢¼´¸üÐÂ Combo ÏÔÊ¾×´Ì¬
+            UpdateComboDisplay(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Combo ï¿½ï¿½Ê¾×´Ì¬
         }
         if (Level6Model.Instance.MusicModel >= 10)
         {
@@ -44,7 +43,7 @@ public class ComputerCatItem : BaseItem
             isPlaying = false;
         }
 
-        // ³ÖÐø¸üÐÂ Combo ÏÔÊ¾
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Combo ï¿½ï¿½Ê¾
         UpdateComboDisplay();
     }
 
@@ -59,20 +58,19 @@ public class ComputerCatItem : BaseItem
             EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level6/Music"));
             musicSource.Pause();
             isPlaying = false;
-            Time.timeScale = 0f;
             Level6Model.Instance.MusicModel = 0;
-            UpdateComboDisplay(); // ¸üÐÂ Combo ÏÔÊ¾×´Ì¬
+            UpdateComboDisplay(); // ï¿½ï¿½ï¿½ï¿½ Combo ï¿½ï¿½Ê¾×´Ì¬
         }
         musicSource.Pause();
         isPlaying = false;
     }
 
-    // ¸üÐÂ Combo ÏÔÊ¾
+    // ï¿½ï¿½ï¿½ï¿½ Combo ï¿½ï¿½Ê¾
     void UpdateComboDisplay()
     {
         if (comboText != null)
         {
-            // µ± MusicModel ²»µÈÓÚ 0 Ê±ÏÔÊ¾£¬µÈÓÚ 0 Ê±Òþ²Ø
+            // ï¿½ï¿½ MusicModel ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0 Ê±ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0 Ê±ï¿½ï¿½ï¿½ï¿½
             bool shouldShow = Level6Model.Instance.MusicModel != 0;
             comboText.gameObject.SetActive(shouldShow);
 
@@ -85,11 +83,11 @@ public class ComputerCatItem : BaseItem
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
-        // ±£ÁôÔ­ÓÐÂß¼­
+        // ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ß¼ï¿½
     }
 
     public override void OnPointerExit(PointerEventData eventData)
     {
-        // ±£ÁôÔ­ÓÐÂß¼­
+        // ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ß¼ï¿½
     }
 }

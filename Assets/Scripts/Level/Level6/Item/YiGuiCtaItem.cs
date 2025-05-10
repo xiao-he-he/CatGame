@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Build.Content;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class YiGuiCtaItem : MonoBehaviour
 {
-    public string triggerTag = "DouMaoBang";  // ´¥·¢±êÇ©Ãû³Æ
+    public string triggerTag = "DouMaoBang";  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç©ï¿½ï¿½ï¿½ï¿½
 
     void OnTriggerEnter2D(Collider2D other)
     {

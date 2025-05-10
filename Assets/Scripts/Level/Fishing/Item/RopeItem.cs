@@ -5,23 +5,23 @@ using View.Select;
 public class RopeItem : BaseItem
 {
     public GameObject LoseUI;
-    [Header("Ðý×ªÉèÖÃ")]
-    public float rotateSpeed = 90f;        // Ðý×ªËÙ¶È(¶È/Ãë)
+    [Header("ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½")]
+    public float rotateSpeed = 90f;        // ï¿½ï¿½×ªï¿½Ù¶ï¿½(ï¿½ï¿½/ï¿½ï¿½)
     [Range(-180, 180)]
-    public float minAngle ;          // ×îÐ¡Ðý×ª½Ç¶È(×ó)
+    public float minAngle ;          // ï¿½ï¿½Ð¡ï¿½ï¿½×ªï¿½Ç¶ï¿½(ï¿½ï¿½)
     [Range(-180, 180)]
-    public float maxAngle ;         // ×î´óÐý×ª½Ç¶È(ÓÒ)
-    private bool shouldRotateClockwise = false; // µ±Ç°Ðý×ª·½Ïò
+    public float maxAngle ;         // ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½Ç¶ï¿½(ï¿½ï¿½)
+    private bool shouldRotateClockwise = false; // ï¿½ï¿½Ç°ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½
 
-    [Header("ÉþË÷ÉèÖÃ")]
-    public float extendSpeed = 5f;        // Éì³öËÙ¶È(µ¥Î»/Ãë)
-    public float maxLength = 10f;         // ×î´ó³¤¶È
-    public float hiddenRopeLength = 2f;   // ³õÊ¼Òþ²ØµÄÉþ×Ó³¤¶È
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
+    public float extendSpeed = 5f;        // ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½(ï¿½ï¿½Î»/ï¿½ï¿½)
+    public float maxLength = 10f;         // ï¿½ï¿½ó³¤¶ï¿½
+    public float hiddenRopeLength = 2f;   // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½
 
-    [Header("×é¼þÒýÓÃ")]
-    public Transform pivotPoint;          // Ðý×ªÖ§µã(Éþ×Ó¶¥²¿)
-    public Transform hook;               // µõ¹³ÎïÌå
-    public SpriteRenderer ropeRenderer;  // Ò»ÌåÊ½Éþ¹³µÄäÖÈ¾Æ÷
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
+    public Transform pivotPoint;          // ï¿½ï¿½×ªÖ§ï¿½ï¿½(ï¿½ï¿½ï¿½Ó¶ï¿½ï¿½ï¿½)
+    public Transform hook;               // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public SpriteRenderer ropeRenderer;  // Ò»ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¾ï¿½ï¿½
 
     private bool isRotating = true;
     private bool isExtending = false;
@@ -30,28 +30,28 @@ public class RopeItem : BaseItem
     private Vector2 extendDirection;
     private Vector3 initialHookPosition;
     private float initialRopeSize;
-    [Header("µã»÷Òþ²ØÎïÌåÉèÖÃ")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
     public GameObject object1;
     public GameObject object2;
     public GameObject object3;
     private int clickCount = 0;
     private void Start()
     {
-        // ÑéÖ¤½Ç¶ÈÉèÖÃ
+        // ï¿½ï¿½Ö¤ï¿½Ç¶ï¿½ï¿½ï¿½ï¿½ï¿½
         if (minAngle >= maxAngle)
         {
-            Debug.LogError("×îÐ¡½Ç¶È±ØÐëÐ¡ÓÚ×î´ó½Ç¶È£¡");
+            Debug.LogError("ï¿½ï¿½Ð¡ï¿½Ç¶È±ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½Ç¶È£ï¿½");
             minAngle = maxAngle - 1;
         }
 
-        // ¼ÇÂ¼³õÊ¼Î»ÖÃºÍ³ß´ç
+        // ï¿½ï¿½Â¼ï¿½ï¿½Ê¼Î»ï¿½ÃºÍ³ß´ï¿½
         initialHookPosition = hook.localPosition;
         if (ropeRenderer != null)
         {
             initialRopeSize = ropeRenderer.size.y;
         }
 
-        // ³õÊ¼Òþ²Ø²¿·ÖÉþ×Ó
+        // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½Ø²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         currentLength = hiddenRopeLength;
         UpdateRopeVisual();
     }
@@ -74,11 +74,11 @@ public class RopeItem : BaseItem
 
     private void HandleRotation()
     {
-        // ¼ÆËãÐý×ª·½Ïò
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½
         float currentAngle = transform.eulerAngles.z;
         if (currentAngle > 180) currentAngle -= 360;
 
-        // ¼ì²éÊÇ·ñÐèÒª¸Ä±äÐý×ª·½Ïò
+        // ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Òªï¿½Ä±ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½
         if (currentAngle <= minAngle)
         {
             shouldRotateClockwise = true;
@@ -88,20 +88,20 @@ public class RopeItem : BaseItem
             shouldRotateClockwise = false;
         }
 
-        // Ó¦ÓÃÐý×ª
+        // Ó¦ï¿½ï¿½ï¿½ï¿½×ª
         float rotation = rotateSpeed * Time.deltaTime * (shouldRotateClockwise ? 1 : -1);
         transform.RotateAround(pivotPoint.position, Vector3.forward, rotation);
     }
 
     private void HandleExtending()
     {
-        // Éì³öµõ¹³
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         currentLength += extendSpeed * Time.deltaTime;
         currentLength = Mathf.Min(currentLength, maxLength);
 
         UpdateRopeVisual();
 
-        // ¼ì²éÊÇ·ñµ½´ï×î´ó³¤¶È
+        // ï¿½ï¿½ï¿½ï¿½Ç·ñµ½´ï¿½ï¿½ï¿½ó³¤¶ï¿½
         if (currentLength >= maxLength)
         {
             StartRetracting();
@@ -110,13 +110,13 @@ public class RopeItem : BaseItem
 
     private void HandleRetracting()
     {
-        // ÊÕ»Øµõ¹³
+        // ï¿½Õ»Øµï¿½ï¿½ï¿½
         currentLength -= extendSpeed * Time.deltaTime;
         currentLength = Mathf.Max(currentLength, hiddenRopeLength);
 
         UpdateRopeVisual();
 
-        // ¼ì²éÊÇ·ñÍêÈ«ÊÕ»Ø
+        // ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½È«ï¿½Õ»ï¿½
         if (currentLength <= hiddenRopeLength)
         {
             FinishRetracting();
@@ -151,12 +151,12 @@ public class RopeItem : BaseItem
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
-        // ¿ÉÒÔÌí¼ÓÊó±êÐüÍ£Ð§¹û
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ð§ï¿½ï¿½
     }
 
     public override void OnPointerExit(PointerEventData eventData)
     {
-        // ¿ÉÒÔÈ¡ÏûÊó±êÐüÍ£Ð§¹û
+        // ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£Ð§ï¿½ï¿½
     }
 
     private void StopRotationAndExtend()
@@ -164,7 +164,7 @@ public class RopeItem : BaseItem
         isRotating = false;
         isExtending = true;
 
-        // ¼ÆËãÉì³ö·½Ïò(µ±Ç°Ðý×ª·½ÏòµÄÏòÏÂÏòÁ¿)
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½Ç°ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
         float angle = transform.eulerAngles.z * Mathf.Deg2Rad;
         extendDirection = new Vector2(Mathf.Sin(angle), -Mathf.Cos(angle));
     }
@@ -180,7 +180,7 @@ public class RopeItem : BaseItem
         isRetracting = false;
         isRotating = true;
 
-        // Èç¹ûµã»÷´ÎÊýÓÃÍê²¢ÇÒÎ´³É¹¦µöµ½£¨WinModel != 1£©£¬ÏÔÊ¾Ê§°Ü½çÃæ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê²¢ï¿½ï¿½Î´ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½WinModel != 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Ê§ï¿½Ü½ï¿½ï¿½ï¿½
         if (clickCount >= 3 && FishingModel.Instance.WinModel != 1)
         {
             if (LoseUI != null)
@@ -194,13 +194,13 @@ public class RopeItem : BaseItem
     {
         if (ropeRenderer == null) return;
 
-        // ¼ÆËã¿É¼û³¤¶È
+        // ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½ï¿½ï¿½
         float visibleLength = Mathf.Max(0, currentLength - hiddenRopeLength);
 
-        // µ÷ÕûÉþ×Ó¾«ÁéµÄ³ß´ç
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¾ï¿½ï¿½ï¿½Ä³ß´ï¿½
         ropeRenderer.size = new Vector2(ropeRenderer.size.x, initialRopeSize + visibleLength);
 
-        // µ÷Õûµõ¹³Î»ÖÃ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
         if (hook != null)
         {
             hook.localPosition = initialHookPosition + (Vector3)(extendDirection * visibleLength);
@@ -214,14 +214,14 @@ public class RopeItem : BaseItem
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(pivotPoint.position, 0.2f);
 
-        // »æÖÆ½Ç¶ÈÏÞÖÆ
+        // ï¿½ï¿½ï¿½Æ½Ç¶ï¿½ï¿½ï¿½ï¿½ï¿½
         Gizmos.color = Color.yellow;
         Vector3 minDir = Quaternion.Euler(0, 0, minAngle) * Vector3.down;
         Vector3 maxDir = Quaternion.Euler(0, 0, maxAngle) * Vector3.down;
         Gizmos.DrawLine(pivotPoint.position, pivotPoint.position + minDir * 2f);
         Gizmos.DrawLine(pivotPoint.position, pivotPoint.position + maxDir * 2f);
 
-        // »æÖÆ×î´ó³¤¶È
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó³¤¶ï¿½
         Gizmos.color = Color.green;
         Gizmos.DrawLine(pivotPoint.position, pivotPoint.position + Vector3.down * maxLength);
     }
