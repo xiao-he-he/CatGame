@@ -237,6 +237,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &38458412
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +287,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &38458415
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -465,6 +473,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &64464682
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +677,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &126207405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,6 +1099,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &213777666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1217,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &227310988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,6 +1370,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &322599044
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1567,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &406895148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,6 +1769,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &459538994
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1919,6 +1955,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &515819739
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,6 +2005,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &515819742
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2147,6 +2191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &530507640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,6 +2241,151 @@ Transform:
   m_Father: {fileID: 227310989}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &551222551
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5399382434274621511, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399382434274621511, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399382434274621511, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399382435470395138, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399382435470395138, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399382435470395138, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399382435981656801, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399382435981656801, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399382435981656801, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399382436147911556, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399382436147911556, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5399382436147911556, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801194, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_Name
+      value: LevelSetting
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8061461605810801198, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
 --- !u!1 &729346291
 GameObject:
   m_ObjectHideFlags: 0
@@ -2345,6 +2538,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &781139177
 GameObject:
   m_ObjectHideFlags: 0
@@ -2459,6 +2656,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &788279099
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,6 +2774,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &803990627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,6 +2972,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &812417997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,6 +3090,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &813985663
 GameObject:
   m_ObjectHideFlags: 0
@@ -3011,6 +3224,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &824351479
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3381,6 +3598,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &901803848
 GameObject:
   m_ObjectHideFlags: 0
@@ -3830,6 +4051,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &956619865
 GameObject:
   m_ObjectHideFlags: 0
@@ -3876,6 +4101,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &956619868
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3990,6 +4219,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &983399949
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4172,6 +4405,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &991139060
 GameObject:
   m_ObjectHideFlags: 0
@@ -4286,6 +4523,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1004676650
 GameObject:
   m_ObjectHideFlags: 0
@@ -4400,6 +4641,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1029762267
 GameObject:
   m_ObjectHideFlags: 0
@@ -4446,6 +4691,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &1029762270
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4784,6 +5033,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &1117345514
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4966,6 +5219,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1166016663
 GameObject:
   m_ObjectHideFlags: 0
@@ -5080,6 +5337,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1185149171
 GameObject:
   m_ObjectHideFlags: 0
@@ -5194,6 +5455,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1192298517
 GameObject:
   m_ObjectHideFlags: 0
@@ -5811,6 +6076,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1001 &1367648840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6131,6 +6400,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1408669505
 GameObject:
   m_ObjectHideFlags: 0
@@ -6177,6 +6450,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &1408669508
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6359,6 +6636,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1428922178
 GameObject:
   m_ObjectHideFlags: 0
@@ -6473,6 +6754,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1459299702
 GameObject:
   m_ObjectHideFlags: 0
@@ -6671,6 +6956,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1498906165
 GameObject:
   m_ObjectHideFlags: 0
@@ -6785,6 +7074,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1514875049
 GameObject:
   m_ObjectHideFlags: 0
@@ -6831,6 +7124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &1514875052
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7013,6 +7310,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1575899123
 GameObject:
   m_ObjectHideFlags: 0
@@ -7127,6 +7428,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1593006446
 GameObject:
   m_ObjectHideFlags: 0
@@ -7225,6 +7530,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &1593006450
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7439,6 +7748,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1599354651
 GameObject:
   m_ObjectHideFlags: 0
@@ -7553,6 +7866,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1646104170
 GameObject:
   m_ObjectHideFlags: 0
@@ -7711,6 +8028,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1750849020
 GameObject:
   m_ObjectHideFlags: 0
@@ -7841,6 +8162,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &1776266875
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8067,6 +8392,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1820429826
 GameObject:
   m_ObjectHideFlags: 0
@@ -8181,6 +8510,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1829380693
 GameObject:
   m_ObjectHideFlags: 0
@@ -8429,6 +8762,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1868334147
 GameObject:
   m_ObjectHideFlags: 0
@@ -8543,6 +8880,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1916741678
 GameObject:
   m_ObjectHideFlags: 0
@@ -8657,6 +8998,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1939196534
 GameObject:
   m_ObjectHideFlags: 0
@@ -8836,6 +9181,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &1982218993
 GameObject:
   m_ObjectHideFlags: 0
@@ -8882,6 +9231,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba1eb358d9fd45468d471a910a30c97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!58 &1982218996
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9064,6 +9417,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fcacbe05ae808f41b155503eba7f189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &2046026571
 GameObject:
   m_ObjectHideFlags: 0
@@ -9347,6 +9704,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &2080204510
 GameObject:
   m_ObjectHideFlags: 0
@@ -9608,6 +9969,7 @@ MonoBehaviour:
   musicSource: {fileID: 2093810536}
   LoseUI: {fileID: 1111767027}
   ComCatItem: {fileID: 1228101348}
+  comboText: {fileID: 0}
 --- !u!82 &2093810536
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9818,6 +10180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0479d51f96a97346966a4fb743984c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1 &2102485692
 GameObject:
   m_ObjectHideFlags: 0
@@ -10010,6 +10376,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edabf932a02efb14a8312ff63058c217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerAudio: {fileID: 0}
+  startY: 0
+  endY: 0
+  TIME: 40
 --- !u!1001 &55082083313767033
 PrefabInstance:
   m_ObjectHideFlags: 0
