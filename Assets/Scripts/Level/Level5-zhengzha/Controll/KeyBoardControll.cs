@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyBoardControll : MonoBehaviour
@@ -7,13 +6,15 @@ public class KeyBoardControll : MonoBehaviour
     public GameObject targetObject; // 在 Inspector 中指定要缩放的目标物体
 
     [Header("动画控制")]
-    public Animator dKeyAnimator;   // D键控制的Animator
-    public string dKeyAnimation = "Animation1"; // D键播放的动画名称
-    public Animator jKeyAnimator;   // J键控制的Animator
-    public string jKeyAnimation = "Animation2"; // J键播放的动画名称
+    public Animator leftKeyAnimator;   // 左键控制的Animator (A/左箭头)
+    public string leftKeyAnimation1 = "Animation1"; // 左键按下动画
+    public string leftKeyAnimation2 = "Animation3"; // 左键释放动画
+    public Animator rightKeyAnimator;  // 右键控制的Animator (D/右箭头)
+    public string rightKeyAnimation1 = "Animation2"; // 右键按下动画
+    public string rightKeyAnimation2 = "Animation4"; // 右键释放动画
 
-    private float dCooldown = 0f;
-    private float jCooldown = 0f;
+    private float leftCooldown = 0f;
+    private float rightCooldown = 0f;
     private float cooldownTime = 0.1f;
 
     void Update()
@@ -21,29 +22,27 @@ public class KeyBoardControll : MonoBehaviour
         if (targetObject == null) return;
 
         // 冷却时间更新
-        if (dCooldown > 0)
-            dCooldown -= Time.deltaTime;
-        if (jCooldown > 0)
-            jCooldown -= Time.deltaTime;
+        if (leftCooldown > 0)
+            leftCooldown -= Time.deltaTime;
+        if (rightCooldown > 0)
+            rightCooldown -= Time.deltaTime;
 
-        // D键处理
-        if (Input.GetKeyDown(KeyCode.D) && dCooldown <= 0f)
+        // 左键处理 (A键或左箭头)
+        if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow) )&& leftCooldown <= 0f)
         {
             ScaleX(targetObject, -0.02f);
-            dKeyAnimator.SetTrigger("Animation1");
-            dCooldown = cooldownTime;
-            Delay();
-            dKeyAnimator.SetTrigger("Animation3");
+            leftKeyAnimator.SetTrigger(leftKeyAnimation1);
+            leftCooldown = cooldownTime;
+            StartCoroutine(TriggerDelayedAnimation(leftKeyAnimator, leftKeyAnimation2));
         }
 
-        // J键处理
-        if (Input.GetKeyDown(KeyCode.J) && jCooldown <= 0f)
+        // 右键处理 (D键或右箭头)
+        if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && rightCooldown <= 0f)
         {
             ScaleX(targetObject, -0.02f);
-            jKeyAnimator.SetTrigger("Animation2");
-            jCooldown = cooldownTime;
-            Delay();
-            jKeyAnimator.SetTrigger("Animation4");
+            rightKeyAnimator.SetTrigger(rightKeyAnimation1);
+            rightCooldown = cooldownTime;
+            StartCoroutine(TriggerDelayedAnimation(rightKeyAnimator, rightKeyAnimation2));
         }
     }
 
@@ -53,9 +52,10 @@ public class KeyBoardControll : MonoBehaviour
         scale.x += delta;
         obj.transform.localScale = scale;
     }
-    IEnumerator Delay()
+
+    IEnumerator TriggerDelayedAnimation(Animator animator, string triggerName)
     {
         yield return new WaitForSeconds(0.01f);
+        animator.SetTrigger(triggerName);
     }
-
 }

@@ -714,10 +714,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 935047170}
-  dKeyAnimator: {fileID: 907299073}
-  dKeyAnimation: Animation1
-  jKeyAnimator: {fileID: 1105526608}
-  jKeyAnimation: Animation2
+  leftKeyAnimator: {fileID: 907299073}
+  leftKeyAnimation1: Animation1
+  leftKeyAnimation2: Animation3
+  rightKeyAnimator: {fileID: 1105526608}
+  rightKeyAnimation1: Animation2
+  rightKeyAnimation2: Animation4
 --- !u!114 &830607706
 MonoBehaviour:
   m_ObjectHideFlags: 0
