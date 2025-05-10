@@ -3469,6 +3469,8 @@ MonoBehaviour:
   WinUI: {fileID: 1712930358}
   AngryUI: {fileID: 1861883952}
   SleepUI: {fileID: 1085546498}
+  scriptsToDisable:
+  - {fileID: 1952955144}
 --- !u!114 &1952955147
 MonoBehaviour:
   m_ObjectHideFlags: 0

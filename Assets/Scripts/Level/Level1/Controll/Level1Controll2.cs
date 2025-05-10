@@ -10,7 +10,7 @@ public class Level1Controll2 : MonoBehaviour
 
     private StageConfig[] stages = new StageConfig[]
     {
-        new StageConfig(15, 1, 3),
+        new StageConfig(20, 1, 3),
        
     };
 
