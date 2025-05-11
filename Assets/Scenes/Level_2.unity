@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e437dcb120a343af87985320c7b7fe65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  A: {fileID: 8300000, guid: 756295955d1dff14b873fae319a2c02f, type: 3}
   levellamp: {fileID: 949019613}
   levellight: {fileID: 2085033244}
 --- !u!1001 &190787813

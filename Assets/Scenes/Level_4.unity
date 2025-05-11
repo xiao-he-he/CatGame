@@ -1663,8 +1663,12 @@ MonoBehaviour:
   PotCover: {fileID: 2064965623}
   OverWater: {fileID: 650564273}
   SuccessChilp: {fileID: 935833242}
-  WaterFall: {fileID: 0}
-  FireFaill: {fileID: 0}
+  A_close: {fileID: 8300000, guid: d55d108ff37adf64fba5eb53becfcd59, type: 3}
+  A_open: {fileID: 8300000, guid: 9015838545836f240864f5aacfa95b01, type: 3}
+  A_boil: {fileID: 8300000, guid: c9a64a3059e31764e8657a2dfcc1a91b, type: 3}
+  A_Fire: {fileID: 8300000, guid: b919bf3b9ca665e4b9c8a0764e85597c, type: 3}
+  A_Cat: {fileID: 8300000, guid: 5a4a8db51e18eda47a423437064f7982, type: 3}
+  A_water: {fileID: 8300000, guid: 298e39edc8fcb41419bf188e97667d3b, type: 3}
 --- !u!1 &682688784
 GameObject:
   m_ObjectHideFlags: 0

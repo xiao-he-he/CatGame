@@ -25,13 +25,14 @@ namespace Level.Level4.Controll
         public GameObject PotCover;
         public GameObject OverWater;
         public GameObject SuccessChilp;
-        public GameObject WaterFall,FireFaill;
         private CancellationTokenSource _cts;
+        public AudioClip A_close, A_open,A_boil,A_Fire,A_Cat,A_water;
         public void OpenPingPot()
         {
             PingPotCover.SetActive(false);
             Cat.SetActive(true);
             _model.OpenPingPot = true;
+            AudioManage.Instant.PlayClip(A_Cat,true);
         }
 
         public void CheckCat()
@@ -57,7 +58,19 @@ namespace Level.Level4.Controll
             _model.OpenFireDown = !_model.OpenFireDown;
             FireDown.SetActive(_model.OpenFireDown);
             Bobble.SetActive(_model.HasHotWater);
+            if (_model.OpenFireDown)
+            {
+                AudioManage.Instant.PlayClip(A_Fire,true);
+            }
+            else
+            {
+                AudioManage.Instant.StopClip(A_Fire);
+            }
             
+            if(_model.HasHotWater)
+                AudioManage.Instant.PlayClip(A_boil,true);
+            else
+                AudioManage.Instant.StopClip(A_boil);
         }
         
 
@@ -72,6 +85,15 @@ namespace Level.Level4.Controll
                     UseLeftCabinet();
                 }
             }
+
+            if (_model.OpenUpCabinet)
+            {
+                AudioManage.Instant.PlayClip(A_open);
+            }
+            else
+            {
+                AudioManage.Instant.PlayClip(A_close);
+            }
         }
         
         public void UseDownCabinet()
@@ -84,6 +106,15 @@ namespace Level.Level4.Controll
                 {
                     UseLeftCabinet();
                 }
+            }
+            
+            if (_model.OpenDownCabinet)
+            {
+                AudioManage.Instant.PlayClip(A_open);
+            }
+            else
+            {
+                AudioManage.Instant.PlayClip(A_close);
             }
         }
         public void UseLeftCabinet()
@@ -103,8 +134,10 @@ namespace Level.Level4.Controll
                 {
                     UseDownCabinet();
                 }
-                
+                AudioManage.Instant.PlayClip(A_open);
             }
+            else
+                AudioManage.Instant.PlayClip(A_close);
         }
         
         public void UseRightCabinet()
@@ -112,6 +145,15 @@ namespace Level.Level4.Controll
             _model.OpenRightCabinet = !_model.OpenRightCabinet;
             GZRight.SetActive(_model.OpenRightCabinet);
             rightopen.SetActive(!_model.OpenRightCabinet);
+            
+            if (_model.OpenRightCabinet)
+            {
+                AudioManage.Instant.PlayClip(A_open);
+            }
+            else
+            {
+                AudioManage.Instant.PlayClip(A_close);
+            }
         }
 
         public void SwitchWater()
@@ -120,9 +162,11 @@ namespace Level.Level4.Controll
             Water.SetActive(_model.OpenWater);
             if (!_model.OpenWater)
             {
-                Debug.Log("关闭");
+                AudioManage.Instant.StopClip(A_water);
                 StopOverwater();
             }
+            else
+                AudioManage.Instant.PlayClip(A_water,true);
             if (_model.PotPos == 2&&_model.OpenWater&&!_model.PotHasWater)
             {
                 PotFullWater();
@@ -188,6 +232,11 @@ namespace Level.Level4.Controll
                 pot_3.SetActive(true);
                 _model.PotPos++;
                 Bobble.SetActive(_model.HasHotWater);
+                if (_model.HasHotWater)
+                {
+                    AudioManage.Instant.PlayClip(A_boil,true);
+                }
+               
                 if (_model.OpenWater)
                 {
                     StartOverwater();

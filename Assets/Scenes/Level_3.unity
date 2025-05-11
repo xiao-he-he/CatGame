@@ -1445,6 +1445,12 @@ MonoBehaviour:
   CatRun: {fileID: 494716708}
   WaterUp: {fileID: 1024924722}
   WaterDowm: {fileID: 1292341467}
+  A_OPenE: {fileID: 8300000, guid: 9cae8b8542977244980650222e1569fa, type: 3}
+  A_CloseE: {fileID: 8300000, guid: 87d052e4a03b442469a7defff9607da6, type: 3}
+  A_CatMove: {fileID: 8300000, guid: 1523fd2d02048204a94afa1508af632f, type: 3}
+  A_Button: {fileID: 8300000, guid: 21731e62e56a7894290fc50c5fb31227, type: 3}
+  A_EEE: {fileID: 8300000, guid: 1056bad9f2bfe854da1b276228378457, type: 3}
+  A_Water: {fileID: 8300000, guid: 298e39edc8fcb41419bf188e97667d3b, type: 3}
 --- !u!1 &1232344079
 GameObject:
   m_ObjectHideFlags: 0

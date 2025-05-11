@@ -8,6 +8,7 @@ namespace Level.Contronal
 {
     public class Level2Controller : BaseLevelController
     {
+        public AudioClip A;
         public Light2D levellamp;
         public Light2D levellight;
         private Level2Model _model = Level2Model.Instance;
@@ -15,7 +16,7 @@ namespace Level.Contronal
 
         public void ChangeLight()
         {
-            
+            AudioManage.Instant.PlayClip(A);
             _model.IsOpenLight = !_model.IsOpenLight;
             if (_model.IsOpenLight)
             {
@@ -47,6 +48,7 @@ namespace Level.Contronal
         
         public void ChangeLamp()
         {
+            AudioManage.Instant.PlayClip(A);
             _model.IsOpenLamp = !_model.IsOpenLamp;
             if (_model.IsOpenLamp)
             {
