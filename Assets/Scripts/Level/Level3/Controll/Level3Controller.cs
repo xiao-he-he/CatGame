@@ -14,6 +14,7 @@ namespace Level.Level3.Controll
         public GameObject WMUp,WMDown;
         public GameObject cat,CatRun;
         public GameObject WaterUp,WaterDowm;
+        public AudioClip A_OPenE, A_CloseE,A_CatMove,A_Button,A_EEE,A_Water;
 
         public async void CatMove()
         {
@@ -21,6 +22,7 @@ namespace Level.Level3.Controll
             {
                 CatRun.SetActive(true);
                 cat.SetActive(false);
+                AudioManage.Instant.PlayClip(A_CatMove);
                 await UniTask.WaitForSeconds(0.1f);
                 if (_model.CatInUp)
                 {
@@ -41,6 +43,7 @@ namespace Level.Level3.Controll
             _model.UpIsOpen = !_model.UpIsOpen;
             if (_model.UpIsOpen)
             {
+                AudioManage.Instant.PlayClip(A_OPenE);
                 door.transform.GetChild(0).gameObject.SetActive(false);
                 door.transform.GetChild(1).gameObject.SetActive(true);
             }
@@ -49,6 +52,7 @@ namespace Level.Level3.Controll
                 Debug.Log("dad");
                 door.transform.GetChild(1).gameObject.SetActive(false);
                 door.transform.GetChild(0).gameObject.SetActive(true);
+                AudioManage.Instant.PlayClip(A_CloseE);
             }
         }
         
@@ -57,11 +61,13 @@ namespace Level.Level3.Controll
             _model.DownIsOpen = !_model.DownIsOpen;
             if (_model.DownIsOpen)
             {
+                AudioManage.Instant.PlayClip(A_OPenE);
                 door.transform.GetChild(0).gameObject.SetActive(false);
                 door.transform.GetChild(1).gameObject.SetActive(true);
             }
             else
             {
+                AudioManage.Instant.PlayClip(A_CloseE);
                 door.transform.GetChild(1).gameObject.SetActive(false);
                 door.transform.GetChild(0).gameObject.SetActive(true);
             }
@@ -72,6 +78,7 @@ namespace Level.Level3.Controll
             _model.HasElectricity = !_model.HasElectricity;
             if (_model.HasElectricity)
             {
+                AudioManage.Instant.PlayClip(A_EEE);
                 CloseE.SetActive(false);
                 OpenE.SetActive(true);
             }
@@ -100,8 +107,10 @@ namespace Level.Level3.Controll
                 _model.UpIsUse = !_model.UpIsUse;
                 if (_model.UpIsUse)
                 {
+                    AudioManage.Instant.PlayClip(A_Button);
                     WaterUp.SetActive(true);
                     await UniTask.WaitForSeconds(0.4f);
+                    AudioManage.Instant.PlayClip(A_Water,true);
                     WaterUp.SetActive(false);
                     WMUp.SetActive(true);
                     
@@ -123,6 +132,7 @@ namespace Level.Level3.Controll
                 }
                 else
                 {
+                    AudioManage.Instant.StopClip(A_Water);
                     WMUp.SetActive(false);
                 }
             }
@@ -136,9 +146,11 @@ namespace Level.Level3.Controll
                 if (_model.DownIsUes)
                 {
                     WaterDowm.SetActive(true);
+                    AudioManage.Instant.PlayClip(A_Button);
                     await UniTask.WaitForSeconds(0.4f);
                     WaterDowm.SetActive(false);
                     WMDown.SetActive(true);
+                    AudioManage.Instant.PlayClip(A_Water,true);
                     if (!_model.DownIsOpen&&!_model.CatInUp)
                     {
                         await UniTask.WaitForSeconds(0.5f);
@@ -157,6 +169,7 @@ namespace Level.Level3.Controll
                 }
                 else
                 {
+                    AudioManage.Instant.StopClip(A_Water);
                     WMDown.SetActive(false);
                 }
             }
