@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class AudioManage : MonoBehaviour
 {
+    private Dictionary<AudioSource, AudioClip> UsedClip;
     private List<AudioSource> Audios = new List<AudioSource>();
     private List<AudioSource> UsedAudio = new List<AudioSource>();
-    public AudioManage instant;
+    private static AudioManage instant;
 
-    public AudioManage Instant
+    public static AudioManage Instant
     {
         get
         {
@@ -27,7 +28,7 @@ public class AudioManage : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void Play(AudioClip tclip)
+    public void PlayClip(AudioClip tclip)
     {
         AudioSource a;
         if (Audios.Count > 0)
@@ -44,13 +45,28 @@ public class AudioManage : MonoBehaviour
         asyncplay(a,tclip);
     }
 
+    //暂停特定音效
+    public void StopClip(AudioClip clip)
+    {
+        foreach (var VARIABLE in UsedClip)
+        {
+            if (VARIABLE.Value == clip)
+            {
+                VARIABLE.Key.Stop();
+            }
+        }
+    }
+    
+
     async void asyncplay(AudioSource a,AudioClip c)
     {
         a.clip = c;
         a.Play();
+        UsedClip[a] = c;
         await UniTask.WaitUntil(() => a.isPlaying);
         UsedAudio.Remove(a);
         Audios.Add(a);
+        UsedClip.Remove(a);
     }
     
     

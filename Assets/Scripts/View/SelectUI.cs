@@ -9,6 +9,7 @@ namespace View
         public void ReturnToMain()
         {
             SceneManager.LoadScene("Start");
+            AudioManage.Instant.Play();
         }
     }
 }
