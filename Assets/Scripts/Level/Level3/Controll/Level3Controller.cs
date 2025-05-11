@@ -49,7 +49,7 @@ namespace Level.Level3.Controll
             }
             else
             {
-                Debug.Log("dad");
+                //Debug.Log("dad");
                 door.transform.GetChild(1).gameObject.SetActive(false);
                 door.transform.GetChild(0).gameObject.SetActive(true);
                 AudioManage.Instant.PlayClip(A_CloseE);

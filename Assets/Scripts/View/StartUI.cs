@@ -1,11 +1,14 @@
 ﻿using System;
+using Level.Model;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace View
 {
     public class StartUI:MonoBehaviour
     {
+        public Slider S, B;
         public GameObject MakerUI;
         public GameObject SettingUI;
         public void StartGame()
@@ -38,6 +41,14 @@ namespace View
         {
             MakerUI.SetActive(false);
         }
-        
+        public void ChangeBGM()
+        {
+            SystemModel.Instance.BGM -= (1 - B.value);
+        }
+
+        public void ChangeSound()
+        {
+            SystemModel.Instance.Sound -= (1 - S.value);
+        }
     }
 }

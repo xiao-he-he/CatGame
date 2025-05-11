@@ -23,7 +23,7 @@ namespace View.Select
             if (Image == null)
             {
                 Debug.LogError("Image不能为空");
-                return;
+                return; 
             }
             AudioManage.Instant.PlayClip(Resources.Load<AudioClip>("Music/lose"));
             Transform root = GameObject.Instantiate(Resources.Load<GameObject>("Prefab/View/Root")).transform;

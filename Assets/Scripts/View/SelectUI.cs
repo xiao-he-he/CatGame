@@ -10,10 +10,6 @@ namespace View
         public void ReturnToMain()
         {
             SceneManager.LoadScene("Start");
-            AudioClip a = null;
-            AudioManage.Instant.PlayClip(a,true);
-            AudioManage.Instant.PlayClip(a);
-            AudioManage.Instant.StopClip(a);
         }
     }
 }

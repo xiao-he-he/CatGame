@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using Level.Model;
 using UnityEngine;
 
 public class AudioManage : MonoBehaviour
@@ -43,6 +44,7 @@ public class AudioManage : MonoBehaviour
             UsedAudio.Add(a);
         }
         a.loop = isloop;
+        a.volume = SystemModel.Instance.Sound;
         asyncplay(a,tclip);
     }
 
