@@ -28,7 +28,7 @@ public class AudioManage : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void PlayClip(AudioClip tclip)
+    public void PlayClip(AudioClip tclip,bool isloop = false)
     {
         AudioSource a;
         if (Audios.Count > 0)
@@ -42,6 +42,7 @@ public class AudioManage : MonoBehaviour
             a  = gameObject.AddComponent<AudioSource>();
             UsedAudio.Add(a);
         }
+        a.loop = isloop;
         asyncplay(a,tclip);
     }
 
@@ -67,6 +68,7 @@ public class AudioManage : MonoBehaviour
         UsedAudio.Remove(a);
         Audios.Add(a);
         UsedClip.Remove(a);
+        a.loop = false;
     }
     
     
