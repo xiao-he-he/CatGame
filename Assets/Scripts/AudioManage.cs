@@ -71,5 +71,13 @@ public class AudioManage : MonoBehaviour
         a.loop = false;
     }
     
+    public void ClearAll()
+    {
+        foreach (var VARIABLE in UsedAudio)
+        {
+            VARIABLE.Stop();
+        }
+    }
+    
     
 }

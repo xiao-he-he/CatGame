@@ -15,6 +15,7 @@ namespace View
         {
             var g = Instantiate(Resources.Load<GameObject>("Prefab/Loading"));
             var TSlider = g.transform.GetChild(1).GetComponent<Slider>();
+            AudioManage.Instant.ClearAll();
             while (TSlider.value<1)
             {
                 TSlider.value += 0.1f;
@@ -28,6 +29,7 @@ namespace View
         public async void ReStart()
         {  var g = Instantiate(Resources.Load<GameObject>("Prefab/Loading"));
             var TSlider = g.transform.GetChild(1).GetComponent<Slider>();
+            AudioManage.Instant.ClearAll();
             while (TSlider.value<1)
             {
                 TSlider.value += 0.1f;

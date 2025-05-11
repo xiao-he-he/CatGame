@@ -19,6 +19,7 @@ namespace View
         public void ReturnSelect()
         {
             SceneManager.LoadScene("Choose");
+            AudioManage.Instant.ClearAll();
         }
         
     }
