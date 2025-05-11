@@ -12,6 +12,7 @@ namespace View.Select
                 Debug.LogError("Image不能为空");
                 return;
             }
+            AudioManage.Instant.PlayClip(Resources.Load<AudioClip>("Music/win"));
             Transform root = GameObject.Instantiate(Resources.Load<GameObject>("Prefab/View/Root")).transform;
             var g = GameObject.Instantiate(Resources.Load<GameObject>("Prefab/View/Win"),root);
             g.transform.GetChild(0).GetComponent<Image>().sprite = Image;
@@ -24,6 +25,7 @@ namespace View.Select
                 Debug.LogError("Image不能为空");
                 return;
             }
+            AudioManage.Instant.PlayClip(Resources.Load<AudioClip>("Music/lose"));
             Transform root = GameObject.Instantiate(Resources.Load<GameObject>("Prefab/View/Root")).transform;
             var g = GameObject.Instantiate(Resources.Load<GameObject>("Prefab/View/Lose (1)"),root);
             g.transform.GetChild(0).GetComponent<Image>().sprite = Image;
