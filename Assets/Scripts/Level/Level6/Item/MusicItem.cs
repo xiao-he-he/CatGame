@@ -14,6 +14,8 @@ public class MusicItem : BaseItem
     private float fallSpeed;   // 计算出的下落速度
     private const float COOLDOWN_DURATION = 0.02f;
     private bool isOnCooldown = false;
+    public AudioClip clip1;
+    public AudioClip clip2;
     void Start()
     {
         transform.position = new Vector3(
@@ -62,19 +64,24 @@ public class MusicItem : BaseItem
                 );
             }
 
-            // 检测D键按下
+   
             if (!isOnCooldown && Input.GetKeyDown(KeyCode.S))
             {
                 if (transform.position.y <= 1.2f && transform.position.y >= -1.2f)
                 {
-
+                    AudioManage.Instant.PlayClip(clip1);
                     Level6Model.Instance.MusicModel++;
                     Level6Model.Instance.MusicMode1 = 1;
                     StartCoroutine(CooldownCoroutine());
 
                     gameObject.SetActive(false);
                 }
-
+                else if ((transform.position.y <= 1.66f && transform.position.y > 1.2f) || (transform.position.y < -1.2f && transform.position.y >= -2f))
+                {
+                    gameObject.SetActive(false);
+                    Level6Model.Instance.MissMusic = 1;
+                    AudioManage.Instant.PlayClip(clip2);
+                }
             }
 
             if (transform.position.y < -2f)
@@ -93,7 +100,7 @@ public class MusicItem : BaseItem
 
         if (y <= 1.2f && y >= -1.2f)
         {
-
+            AudioManage.Instant.PlayClip(clip1);
             Level6Model.Instance.MusicModel++;
             Level6Model.Instance.MusicMode1 = 1;
 
@@ -106,7 +113,7 @@ public class MusicItem : BaseItem
             if ((y <= 1.66f && y > 1.2f) || (y < -1.2f && y >= -2f))
             {
                 gameObject.SetActive(false);
-            Level6Model.Instance.MissMusic = 1;
+            Level6Model.Instance.MissMusic = 1; AudioManage.Instant.PlayClip(clip2);
         }
         IEnumerator CooldownCoroutine()
         {

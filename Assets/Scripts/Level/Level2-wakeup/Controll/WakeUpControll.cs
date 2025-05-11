@@ -19,7 +19,8 @@ public class WakeUpControll : BaseLevelController
     private bool isTimer1Running = false;
     private bool isTimer2Running = false;
     private bool isTimer3Running = false;
-   
+
+    public AudioClip clip;
     void Update()
     {
         if (isTimer1Running)
@@ -55,7 +56,7 @@ public class WakeUpControll : BaseLevelController
         if (UI.position.y <= -1.0)
         {
             sleep.SetActive(true);
-            
+            AudioManage.Instant.PlayClip(clip ,true);
             angry.SetActive(false);
             isTimer1Running = true;
             isTimer2Running = false;
@@ -82,7 +83,10 @@ public class WakeUpControll : BaseLevelController
             isTimer3Running = true;
 
         }
-
+        if(WakeUpModel.Instance.SleepTime >= 2.5f)
+        {
+            AudioManage.Instant.StopClip(clip);
+        }
 
     }
 }

@@ -4,8 +4,14 @@ using UnityEngine.SceneManagement;
 
 public class YiGuiCtaItem : MonoBehaviour
 {
-    public string triggerTag = "DouMaoBang";  // ������ǩ����
 
+    public string triggerTag = "DouMaoBang";  // ������ǩ����
+    public AudioClip clip;
+
+    private void Start()
+    {
+        AudioManage.Instant.PlayClip(clip);
+    }
     void OnTriggerEnter2D(Collider2D other)
     {
         GameObject object3 = GameObject.FindGameObjectWithTag(triggerTag);

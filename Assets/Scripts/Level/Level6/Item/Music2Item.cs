@@ -1,4 +1,5 @@
 using System.Collections;
+using Level.Level4.Item;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -13,7 +14,9 @@ public class Music2Item :BaseItem
     public float TIME = 40f;
     private float fallSpeed;   // ������������ٶ�
     private const float COOLDOWN_DURATION = 0.02f;
-    private bool isOnCooldown = false;
+    private bool isOnCooldown = false; 
+    public AudioClip clip1;
+    public AudioClip clip2;
     void Start()
     {
         transform.position = new Vector3(
@@ -65,14 +68,19 @@ public class Music2Item :BaseItem
             {
                 if (transform.position.y <= 1.2f && transform.position.y >= -1.2f)
                 {
-
+                    AudioManage.Instant.PlayClip(clip1);
                     Level6Model.Instance.MusicModel++;
                     Level6Model.Instance.MusicMode2 = 1;
                     StartCoroutine(CooldownCoroutine());
 
                     gameObject.SetActive(false);
                 }
-
+                else if ((transform.position.y <= 1.66f && transform.position.y > 1.2f) || (transform.position.y < -1.2f && transform.position.y >= -2f))
+                {
+                    gameObject.SetActive(false);
+                    Level6Model.Instance.MissMusic = 1;
+                    AudioManage.Instant.PlayClip(clip2);
+                }
             }
             if (transform.position.y < -2f)
             {
@@ -90,7 +98,7 @@ public class Music2Item :BaseItem
 
         if (y <= 1.2f && y >= -1.2f)
         {
-
+            AudioManage.Instant.PlayClip(clip1);
             Level6Model.Instance.MusicModel++;
             Level6Model.Instance.MusicMode2 = 1;
 
@@ -101,7 +109,7 @@ public class Music2Item :BaseItem
         else if ((y <= 1.66f && y > 1.2f) || (y < -1.2f && y >= -2f))
         {
             gameObject.SetActive(false);
-            Level6Model.Instance.MissMusic = 1;
+            Level6Model.Instance.MissMusic = 1; AudioManage.Instant.PlayClip(clip2);
         }
 
 

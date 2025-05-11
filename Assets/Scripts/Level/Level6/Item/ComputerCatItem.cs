@@ -11,14 +11,18 @@ public class ComputerCatItem : BaseItem
     public GameObject LoseUI;
     public GameObject ComCatItem;
     private bool isPlaying = false;
+    public AudioClip clip;
 
-    // Combo ��ʾ��ر���
     public Text comboText; // ������ʾ Combo �� UI Text ���
-
+    private void Start()
+    {
+        AudioManage.Instant.PlayClip(clip,true);
+    }
     public override void OnPointerClick(PointerEventData eventData)
     {
         if (!isPlaying)
         {
+            AudioManage.Instant.StopClip(clip);
             musicSource.Play();
             musicstart.SetActive(true);
             StartCoroutine(StopMusicAfterDelay(40f));

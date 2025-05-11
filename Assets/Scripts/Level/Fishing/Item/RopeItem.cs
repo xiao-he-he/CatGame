@@ -4,6 +4,7 @@ using View.Select;
 
 public class RopeItem : BaseItem
 {
+    public AudioClip clip2;
     public GameObject LoseUI;
     [Header("��ת����")]
     public float rotateSpeed = 90f;        // ��ת�ٶ�(��/��)
@@ -22,7 +23,7 @@ public class RopeItem : BaseItem
     public Transform pivotPoint;          // ��ת֧��(���Ӷ���)
     public Transform hook;               // ��������
     public SpriteRenderer ropeRenderer;  // һ��ʽ��������Ⱦ��
-
+    public AudioClip clip;
     private bool isRotating = true;
     private bool isExtending = false;
     private bool isRetracting = false;
@@ -35,6 +36,7 @@ public class RopeItem : BaseItem
     public GameObject object2;
     public GameObject object3;
     private int clickCount = 0;
+    private bool isPlay = false;
     private void Start()
     {
         // ��֤�Ƕ�����
@@ -58,6 +60,11 @@ public class RopeItem : BaseItem
 
     private void Update()
     {
+        if (isPlay == false)
+        {
+            AudioManage.Instant.PlayClip(clip, true);
+            isPlay = true;
+        }
         if (isRotating)
         {
             HandleRotation();
@@ -125,6 +132,7 @@ public class RopeItem : BaseItem
 
     public override void OnPointerClick(PointerEventData eventData)
     {
+        AudioManage.Instant.StopClip(clip);
         if (clickCount < 3)
         {
             clickCount++;
@@ -179,7 +187,8 @@ public class RopeItem : BaseItem
     {
         isRetracting = false;
         isRotating = true;
-
+        isPlay = false;
+        AudioManage.Instant.PlayClip(clip2);
         // �������������겢��δ�ɹ�������WinModel != 1������ʾʧ�ܽ���
         if (clickCount >= 3 && FishingModel.Instance.WinModel != 1)
         {

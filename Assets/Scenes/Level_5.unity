@@ -1803,10 +1803,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roudian2: {fileID: 1920820357}
   roudian5: {fileID: 2084793899}
+  clip1: {fileID: 8300000, guid: 978641bc2537a0d408b3198305595299, type: 3}
+  clip2: {fileID: 8300000, guid: 88d9d78986c0e334681b393bd50c81c0, type: 3}
   script: ZhuaItem
   UIimage: {fileID: 976037705}
   chou: {fileID: 1206644869}
   blood: {fileID: 1934464621}
+  isPlay: 0
 --- !u!4 &478068606
 Transform:
   m_ObjectHideFlags: 0
@@ -1836,8 +1839,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roudian8: {fileID: 886431448}
   UIimage: {fileID: 554060318}
+  clip1: {fileID: 8300000, guid: 978641bc2537a0d408b3198305595299, type: 3}
+  clip2: {fileID: 8300000, guid: 88d9d78986c0e334681b393bd50c81c0, type: 3}
   WinUI: {fileID: 501129118}
   blood: {fileID: 1400946869}
+  isPlay: 0
 --- !u!114 &478068608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1850,12 +1856,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15909130bb7739f44949ecb2595e73c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip1: {fileID: 8300000, guid: 978641bc2537a0d408b3198305595299, type: 3}
+  clip2: {fileID: 8300000, guid: 88d9d78986c0e334681b393bd50c81c0, type: 3}
   roudian4: {fileID: 733268177}
   roudian7: {fileID: 1097023125}
   script: ZhuaItem
   UIimage: {fileID: 966823974}
   chou: {fileID: 1206644869}
   blood: {fileID: 1827507579}
+  isPlay: 0
 --- !u!114 &478068609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1868,12 +1877,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eacc9f29e488e140a66319f74ea1f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip1: {fileID: 8300000, guid: 978641bc2537a0d408b3198305595299, type: 3}
+  clip2: {fileID: 8300000, guid: 88d9d78986c0e334681b393bd50c81c0, type: 3}
   roudian3: {fileID: 987143381}
   roudian6: {fileID: 716333264}
   script: ZhuaItem
   UIimage: {fileID: 706581735}
   chou: {fileID: 1206644869}
   blood: {fileID: 708097720}
+  isPlay: 0
 --- !u!1 &501129118
 GameObject:
   m_ObjectHideFlags: 0
@@ -7403,6 +7415,8 @@ MonoBehaviour:
   ySpeed: 0
   Zhua: {fileID: 886431453}
   lizi: {fileID: 553809008}
+  clip: {fileID: 8300000, guid: c58ffc529fdffb34ba553eb8c6b2ca8b, type: 3}
+  holding: 0
 --- !u!1 &766372959
 GameObject:
   m_ObjectHideFlags: 0
@@ -13003,6 +13017,8 @@ MonoBehaviour:
   ySpeed: -0.05
   Zhua: {fileID: 1097023126}
   lizi: {fileID: 954679149}
+  clip: {fileID: 8300000, guid: c58ffc529fdffb34ba553eb8c6b2ca8b, type: 3}
+  holding: 0
 --- !u!1 &998411816
 GameObject:
   m_ObjectHideFlags: 0
@@ -13754,6 +13770,8 @@ MonoBehaviour:
   ySpeed: 0
   Zhua: {fileID: 2084793900}
   lizi: {fileID: 1857365954}
+  clip: {fileID: 8300000, guid: c58ffc529fdffb34ba553eb8c6b2ca8b, type: 3}
+  holding: 0
 --- !u!1 &1289204978
 GameObject:
   m_ObjectHideFlags: 0
@@ -25018,6 +25036,8 @@ MonoBehaviour:
   ySpeed: -0.05
   Zhua: {fileID: 716333265}
   lizi: {fileID: 1735414549}
+  clip: {fileID: 8300000, guid: c58ffc529fdffb34ba553eb8c6b2ca8b, type: 3}
+  holding: 0
 --- !u!1 &1930812442
 GameObject:
   m_ObjectHideFlags: 0

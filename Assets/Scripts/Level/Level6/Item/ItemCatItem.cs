@@ -11,8 +11,9 @@ public class ItemCatItem : Level5BaseItem
     private float fixedZPosition; // �洢�̶���Z����
     public GameObject DouMaoBang;
     public GameObject LoseUI;
-    public GameObject targetZone; 
-
+    public GameObject targetZone;
+    public AudioClip clip;
+  
     private void Start()
     {
         fixedZPosition = transform.position.z; // ��ʼ��ʱ����Z����
@@ -42,6 +43,7 @@ public class ItemCatItem : Level5BaseItem
     {
         if (!isDragging)
         {
+            AudioManage.Instant.PlayClip(clip);
             isDragging = true;
             // ��ȡ���λ�ò��̶�Z����
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

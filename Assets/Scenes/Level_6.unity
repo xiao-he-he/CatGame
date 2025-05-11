@@ -241,6 +241,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 24.26
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &64464682
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +379,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 37.19
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &66096722
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -563,6 +567,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 34.25
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &126207405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,6 +1105,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 24.48
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &227310988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1192,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 30.84
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &298159552
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1300,6 +1310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   object1: {fileID: 1228101348}
   object2: {fileID: 935723769}
+  clip1: {fileID: 8300000, guid: ac3593c6376af82449d3573fb1081d51, type: 3}
   triggerTag: CatItemTag
 --- !u!60 &322599048
 PolygonCollider2D:
@@ -1311,7 +1322,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1449,6 +1460,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 22.6
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &377181332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1512,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 34.69
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &377181335
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1617,6 +1632,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 32.41
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &381742047
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1735,6 +1752,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 29.87
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &390590999
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2090,6 +2109,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 24.73
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &515819739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,6 +2161,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 14.42
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &515819742
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2326,6 +2349,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 23.1
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &530507640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2422,6 +2447,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 34
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &574890575
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2647,6 +2674,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 29.65
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &803990627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,6 +2874,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 17.87
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &812417997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2963,6 +2994,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 37.44
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &813985663
 GameObject:
   m_ObjectHideFlags: 0
@@ -3097,6 +3130,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 31.5
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &837213474
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3317,6 +3352,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 33.06
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &849746427
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3605,6 +3642,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 32.62
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &901803848
 GameObject:
   m_ObjectHideFlags: 0
@@ -3918,6 +3957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9539159de5cf934bae7cfe47b461c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlay: 0
+  clip: {fileID: 8300000, guid: 0de8155c5eeaeba4a8b0395273576dd0, type: 3}
   targetZone: {fileID: 1109201661}
 --- !u!50 &935723774
 Rigidbody2D:
@@ -4058,6 +4099,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 39.31
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &991139060
 GameObject:
   m_ObjectHideFlags: 0
@@ -4176,6 +4219,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 21.44
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1004676650
 GameObject:
   m_ObjectHideFlags: 0
@@ -4294,6 +4339,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 37.69
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1022942814
 GameObject:
   m_ObjectHideFlags: 0
@@ -4449,6 +4496,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 20.94
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &1029762270
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4746,6 +4795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerTag: DouMaoBang
+  clip: {fileID: 8300000, guid: d7048ae7dd7a76649ac98618dbc830eb, type: 3}
 --- !u!1 &1111767027
 GameObject:
   m_ObjectHideFlags: 0
@@ -4941,6 +4991,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 29.43
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1185149171
 GameObject:
   m_ObjectHideFlags: 0
@@ -5059,6 +5111,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 17.65
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1192298517
 GameObject:
   m_ObjectHideFlags: 0
@@ -5383,6 +5437,7 @@ MonoBehaviour:
   DouMaoBang: {fileID: 935723769}
   LoseUI: {fileID: 1197413587}
   targetZone: {fileID: 322599044}
+  clip: {fileID: 8300000, guid: d7048ae7dd7a76649ac98618dbc830eb, type: 3}
 --- !u!50 &1228101353
 Rigidbody2D:
   serializedVersion: 4
@@ -5538,6 +5593,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 39.53
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &1255884084
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5798,6 +5855,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 34.47
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1370228563
 GameObject:
   m_ObjectHideFlags: 0
@@ -6000,6 +6059,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 16.02
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1399027263
 GameObject:
   m_ObjectHideFlags: 0
@@ -6130,6 +6191,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 29.18
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &1408669508
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6396,6 +6459,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 21.19
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1428922178
 GameObject:
   m_ObjectHideFlags: 0
@@ -6514,6 +6579,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 32.84
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1459299702
 GameObject:
   m_ObjectHideFlags: 0
@@ -6716,6 +6783,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 16.27
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1498906165
 GameObject:
   m_ObjectHideFlags: 0
@@ -6834,6 +6903,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 39.09
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1504573885
 GameObject:
   m_ObjectHideFlags: 0
@@ -6964,6 +7035,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 19.56
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &1514875052
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7150,6 +7223,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 22.85
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1540676508
 GameObject:
   m_ObjectHideFlags: 0
@@ -7200,6 +7275,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 28.24
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &1540676511
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7370,6 +7447,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 7.87
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &1593006450
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7588,6 +7667,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 36.1
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1599354651
 GameObject:
   m_ObjectHideFlags: 0
@@ -7706,6 +7787,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 19.31
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1605437981
 GameObject:
   m_ObjectHideFlags: 0
@@ -7756,6 +7839,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 35.6
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &1605437984
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8068,6 +8153,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 31.09
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1750849020
 GameObject:
   m_ObjectHideFlags: 0
@@ -8202,6 +8289,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 26.33
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &1776266875
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8432,6 +8521,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 9.43
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1820429826
 GameObject:
   m_ObjectHideFlags: 0
@@ -8550,6 +8641,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 28.02
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1829380693
 GameObject:
   m_ObjectHideFlags: 0
@@ -8802,6 +8895,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 35.88
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1868334147
 GameObject:
   m_ObjectHideFlags: 0
@@ -8920,6 +9015,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 25.89
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1916741678
 GameObject:
   m_ObjectHideFlags: 0
@@ -9038,6 +9135,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 26.14
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1939196534
 GameObject:
   m_ObjectHideFlags: 0
@@ -9204,6 +9303,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 14.64
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &1982218993
 GameObject:
   m_ObjectHideFlags: 0
@@ -9254,6 +9355,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 27.55
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &1982218996
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9372,6 +9475,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 37.91
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &2001637813
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9558,6 +9663,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 11.09
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &2046026571
 GameObject:
   m_ObjectHideFlags: 0
@@ -9794,6 +9901,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 36.32
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &2068822379
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9980,6 +10089,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 27.81
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &2080204510
 GameObject:
   m_ObjectHideFlags: 0
@@ -10110,6 +10221,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 38.82
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!58 &2085592724
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10359,6 +10472,7 @@ MonoBehaviour:
   musicSource: {fileID: 2093810536}
   LoseUI: {fileID: 1111767027}
   ComCatItem: {fileID: 1228101348}
+  clip: {fileID: 8300000, guid: 5a400b786185cd248afe499bb9f027d1, type: 3}
   comboText: {fileID: 1504573887}
 --- !u!82 &2093810536
 AudioSource:
@@ -10574,6 +10688,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 12.66
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1 &2102485692
 GameObject:
   m_ObjectHideFlags: 0
@@ -10770,6 +10886,8 @@ MonoBehaviour:
   startY: 11
   endY: -1.2
   TIME: 31.31
+  clip1: {fileID: 8300000, guid: 89014fb6606c0d34cb738b31ebb334c8, type: 3}
+  clip2: {fileID: 8300000, guid: b1bdd7e1947f75e4093e8126c490d719, type: 3}
 --- !u!1001 &55082083313767033
 PrefabInstance:
   m_ObjectHideFlags: 0

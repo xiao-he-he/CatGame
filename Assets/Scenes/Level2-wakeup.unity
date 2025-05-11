@@ -598,6 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a2af841607a34c419d70188883a54fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 00b45640bc772d543b5792f2b6c14964, type: 3}
   animatorCat: {fileID: 1490213484}
   animatorHand: {fileID: 1928603615}
   triggerName1: SwitchAnimation1
@@ -3439,6 +3440,7 @@ MonoBehaviour:
   sleep: {fileID: 1340638705}
   offset1: {x: 0, y: 0.8, z: 0}
   offset2: {x: 0, y: 1.3, z: 0}
+  clip: {fileID: 0}
 --- !u!4 &1952955145
 Transform:
   m_ObjectHideFlags: 0

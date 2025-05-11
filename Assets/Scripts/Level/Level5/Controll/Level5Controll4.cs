@@ -9,18 +9,33 @@ public class Level5Controll4 : MonoBehaviour
     public GameObject roudian8;
 
     public GameObject UIimage;
+    public AudioClip clip1;
+    public AudioClip clip2;
 
     public GameObject WinUI;
     public GameObject blood;
+    public bool isPlay = false;
     private void Update()
     {
+        if (Level5Model.Instance.isfour)
+        {
+            AudioManage.Instant.PlayClip(clip1, true);
+        Level5Model.Instance.isfour = false;
+        }
         if (roudian8.transform.position.x <= -0.165f && Level5Model.Instance.isSun)
         {
+            if (isPlay == false)
+            {
+            AudioManage.Instant.StopClip(clip1); 
+            AudioManage.Instant.PlayClip(clip2, true); 
+                isPlay = true;
+            }
             blood.SetActive(true);
         }
     }
     public void lastjudge()
     {
+        AudioManage.Instant.StopClip(clip2);
         UIimage.SetActive(false);
         blood.SetActive(false);
         Level5Model.Instance.isSun = false;

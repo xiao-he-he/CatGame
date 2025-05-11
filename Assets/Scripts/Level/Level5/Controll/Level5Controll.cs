@@ -10,23 +10,38 @@ public class Level5Controll : MonoBehaviour
    
     
     public GameObject roudian5;
-   
-    
-   
+
+
+    public AudioClip clip1;
+    public AudioClip clip2;
     public string script;
     public GameObject UIimage;
     public GameObject chou;
     public GameObject blood;
-    private void Update()
+    public bool isPlay = false;
+    private void Start()
     {
+        AudioManage.Instant.PlayClip(clip1, true);
+    }
+    private void Update()
+    { 
+       
         if(roudian5.transform.position.x >= 0.165f&&Level5Model.Instance.isSun)
         {
+            if(isPlay == false) 
+            {
+                AudioManage.Instant.StopClip(clip1);
+            AudioManage.Instant.PlayClip(clip2, true);
+                isPlay = true;
+            }
+            
             blood.SetActive(true);
         }
     }
 
     public void judge1()
     {
+        AudioManage.Instant.StopClip(clip2);
         UIimage.SetActive(false);
         blood.SetActive(false);
         Level5Model.Instance.isSun = false;
@@ -36,6 +51,7 @@ public class Level5Controll : MonoBehaviour
             MonoBehaviour targetScript = (MonoBehaviour)roudian2.GetComponent(script);
             targetScript.enabled = true;
             chou.SetActive(true);
+            Level5Model.Instance.istwo = true;
         }
         else if(roudian5.transform.position.x > Level5Model.Instance.xLimitMax1)
         {

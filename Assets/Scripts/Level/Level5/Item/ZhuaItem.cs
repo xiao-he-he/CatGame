@@ -12,9 +12,9 @@ public class ZhuaItem : Level5BaseItem
     public float ySpeed;
     public Transform Zhua;
     public GameObject lizi;
-    
+    public AudioClip clip;
     private bool isHolding = false; // 跟踪是否正在按住
-
+    public bool holding = false;
     public override void OnPointerClick(PointerEventData eventData)
     {
         UIimage.SetActive(true);
@@ -32,6 +32,13 @@ public class ZhuaItem : Level5BaseItem
 
     protected override void OnHold(float holdTime)
     {
+        if(holding == false)
+        
+        { 
+            AudioManage.Instant.PlayClip(clip,true);
+           holding = true;
+        }
+       
         if (!isHolding)
         {
             // 开始按住时播放粒子效果
@@ -50,11 +57,13 @@ public class ZhuaItem : Level5BaseItem
     // 添加松开时的处理
     public override void OnPointerUp(PointerEventData eventData)
     {
+        AudioManage.Instant.StopClip(clip); 
         base.OnPointerUp(eventData);
 
         if (isHolding ) lizi.SetActive(false);
           
 
         isHolding = false;
+        holding = false;
     }
 }

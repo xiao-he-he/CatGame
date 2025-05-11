@@ -8,6 +8,7 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class WakeItem : BaseItem
 {
+    public AudioClip clip;
     private float timer = 0f;
     private bool isClicked = false;
     public Animator animatorCat;
@@ -43,7 +44,7 @@ public class WakeItem : BaseItem
     public override void OnPointerClick(PointerEventData eventData)
     {
         WakeUpModel.Instance.clickModel += 1f;
-        
+        AudioManage.Instant.PlayClip(clip);
         
         isClicked = true;
         WakeUpModel.Instance.clickModel++;

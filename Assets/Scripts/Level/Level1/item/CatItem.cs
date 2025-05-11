@@ -8,9 +8,10 @@ using level1model;
 
 public class CatItem : BaseItem
 {
-   
+   public AudioClip clip;
     public override void OnPointerClick(PointerEventData eventData)
     {
+        AudioManage.Instant.PlayClip(clip);
             gameObject.SetActive(false);
             Level1Model.Instance.CatModel++;
             Debug.Log($"调用次数: {Level1Model.Instance.CatModel}");

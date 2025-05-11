@@ -514,6 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e255f6d184fa6c4a9bc059de14847ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip2: {fileID: 8300000, guid: 4bbb4faaae362904ebc201538d44cede, type: 3}
   LoseUI: {fileID: 1825475130}
   rotateSpeed: 90
   minAngle: -40
@@ -524,6 +525,7 @@ MonoBehaviour:
   pivotPoint: {fileID: 617844189}
   hook: {fileID: 618113011}
   ropeRenderer: {fileID: 692613651}
+  clip: {fileID: 8300000, guid: 0de8155c5eeaeba4a8b0395273576dd0, type: 3}
   object1: {fileID: 703959095}
   object2: {fileID: 231046838}
   object3: {fileID: 1683542800}
@@ -1543,6 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc21ef02d3186dc48b8aaa5d9df4b221, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 0}
 --- !u!50 &1816952945
 Rigidbody2D:
   serializedVersion: 4

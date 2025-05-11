@@ -3915,6 +3915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9539159de5cf934bae7cfe47b461c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlay: 0
+  clip: {fileID: 8300000, guid: 0de8155c5eeaeba4a8b0395273576dd0, type: 3}
   targetZone: {fileID: 1109201661}
 --- !u!50 &935723774
 Rigidbody2D:
@@ -4910,6 +4912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerTag: DouMaoBang
+  clip: {fileID: 8300000, guid: d7048ae7dd7a76649ac98618dbc830eb, type: 3}
 --- !u!1 &1111767027
 GameObject:
   m_ObjectHideFlags: 0

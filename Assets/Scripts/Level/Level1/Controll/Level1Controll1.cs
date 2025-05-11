@@ -7,7 +7,7 @@ using UnityEngine;
 public class Level1Controll1 : MonoBehaviour
 {
     public List<GameObject> childObjects = new List<GameObject>();
-
+    public AudioClip clip;
 
     private StageConfig[] stages = new StageConfig[]
     {
@@ -41,7 +41,7 @@ public class Level1Controll1 : MonoBehaviour
                
                 // 随机选择对象
                 List<GameObject> selected = GetRandomObjects(stage.objectsToShow);
-
+                AudioManage.Instant.PlayClip(clip);
                 // 显示并隐藏对象
                 StartCoroutine(ShowAndHide(selected, stage.visibleDuration));
 

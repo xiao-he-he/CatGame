@@ -13,7 +13,7 @@ public class CatMoveItem : MonoBehaviour
     private bool movingRight = true;
     private Vector3 currentPosition;
     private float currentMoveSpeed;
-
+   
     private void Start()
     {
         currentPosition = transform.position;

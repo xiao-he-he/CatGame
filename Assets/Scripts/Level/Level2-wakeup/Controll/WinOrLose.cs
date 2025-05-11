@@ -34,6 +34,7 @@ public class WinOrLose : MonoBehaviour
         {
             if (WakeUpModel.Instance.ComfotableTime >= 10f)
             {
+                WakeUpModel.Instance.ComfotableTime = 10f;
                 EndUI.WinUI(Resources.Load<Sprite>("Image/Win/Level2S"));
                 foreach (var script in scriptsToDisable)
                 {
@@ -50,6 +51,7 @@ public class WinOrLose : MonoBehaviour
                     script.enabled = false;
                 }
                 Isc = false;
+                WakeUpModel.Instance.SleepTime = 0f;
             }
             if (WakeUpModel.Instance.AngryTime >= 2.5f)
             {
@@ -59,6 +61,7 @@ public class WinOrLose : MonoBehaviour
                     script.enabled = false;
                 }
                 Isc = false;
+                WakeUpModel.Instance.AngryTime = 0f;
             }
 
         }

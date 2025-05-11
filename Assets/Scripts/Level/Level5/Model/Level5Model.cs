@@ -22,4 +22,7 @@ public class Level5Model : BaseLevelModel<Level5Model>
     public float yLimitMax4 = 0f;
     public float yLimitMin4 = 0f;
     public bool isSun;
+    public bool istwo = false;
+    public bool isthree = false;
+    public bool isfour = false;
 }
