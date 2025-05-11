@@ -10,7 +10,7 @@ public class WinOrLose : MonoBehaviour
     public GameObject WinUI;
     public GameObject AngryUI;
     public GameObject SleepUI;
-  
+    public MonoBehaviour[] scriptsToDisable;
     private void Win()
     {
         WinUI.SetActive(true);
@@ -29,21 +29,30 @@ public class WinOrLose : MonoBehaviour
         Debug.Log(WakeUpModel.Instance.SleepTime);
         Debug.Log(WakeUpModel.Instance.ComfotableTime);
         
-        if (WakeUpModel.Instance.ComfotableTime >= 30f)
+        if (WakeUpModel.Instance.ComfotableTime >= 10f)
         {
             EndUI.WinUI(Resources.Load<Sprite>("Image/Win/Level2S"));
-            
+            foreach (var script in scriptsToDisable)
+            {
+                script.enabled = false;
+            }
 
         }
-        if (WakeUpModel.Instance.SleepTime >= 15f)
+        if (WakeUpModel.Instance.SleepTime >= 2.5f)
         {
             EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level2/Sleep"));
-            
+            foreach (var script in scriptsToDisable)
+            {
+                script.enabled = false;
+            }
         }
-        if (WakeUpModel.Instance.AngryTime >= 15f)
+        if (WakeUpModel.Instance.AngryTime >= 2.5f)
         {
             EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level2/Angry"));
-            
+            foreach (var script in scriptsToDisable)
+            {
+                script.enabled = false;
+            }
         }
 
     }

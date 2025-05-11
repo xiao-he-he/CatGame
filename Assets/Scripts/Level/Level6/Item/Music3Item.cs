@@ -63,7 +63,7 @@ public class Music3Item :BaseItem
             }
             if (!isOnCooldown && Input.GetKeyDown(KeyCode.J))
             {
-                if (transform.position.y <= 0.8f && transform.position.y >= -0.8f)
+                if (transform.position.y <= 1.2f && transform.position.y >= -1.2f)
                 {
 
                     Level6Model.Instance.MusicModel++;
@@ -88,7 +88,7 @@ public class Music3Item :BaseItem
         float y = transform.position.y;
 
 
-        if (y <= 0.8f && y >= -0.8f)
+        if (y <= 1.2f && y >= -1.2f)
         {
 
             Level6Model.Instance.MusicModel++;
@@ -98,7 +98,7 @@ public class Music3Item :BaseItem
             gameObject.SetActive(false);
         }
 
-        else if ((y <= 1.66f && y > 0.8f) || (y < -0.8f && y >= -2f))
+        else if ((y <= 1.66f && y > 1.2f) || (y < -1.2f && y >= -2f))
         {
             gameObject.SetActive(false);
             Level6Model.Instance.MissMusic = 1;
