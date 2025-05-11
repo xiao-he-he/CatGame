@@ -64,7 +64,7 @@ public class AudioManage : MonoBehaviour
         a.clip = c;
         a.Play();
         UsedClip[a] = c;
-        await UniTask.WaitUntil(() => a.isPlaying);
+        await UniTask.WaitUntil(() => !a.isPlaying);
         UsedAudio.Remove(a);
         Audios.Add(a);
         UsedClip.Remove(a);
