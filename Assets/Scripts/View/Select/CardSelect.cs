@@ -1,5 +1,6 @@
 
 using Cysharp.Threading.Tasks;
+using Level.Model;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -10,7 +11,7 @@ public class CardSelect : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     public delegate void Chick();
 
     [Header("跳转的关卡数")]
-    public string level ;
+    public int level ;
 
     public UnityEngine.UI.Slider TSlider;
     public GameObject ui;
@@ -35,6 +36,29 @@ public class CardSelect : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
             TSlider.value += 0.1f;
             await UniTask.WaitForSeconds(0.1f);
         }
-        SceneManager.LoadScene(level);
+
+        SystemModel.Instance.ThisLevel = level; 
+        switch (level)
+        {
+            case 1:
+                SceneManager.LoadScene("Level_1");
+                break;
+            case 2:
+                SceneManager.LoadScene("Level_2");
+                break;
+            case 3:
+                SceneManager.LoadScene("Level_3");
+                break;
+            case 4:
+                SceneManager.LoadScene("Level_4");
+                break;
+            case 5:
+                SceneManager.LoadScene("Level_5");
+                break;
+            case 6:
+                SceneManager.LoadScene("Level_6");
+                break;
+        }
+        
     }
 }

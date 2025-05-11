@@ -40,6 +40,33 @@ namespace View
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
+        public void NextLevel()
+        {
+            SystemModel.Instance.ThisLevel++;
+            ClearnModels();
+            switch (SystemModel.Instance.ThisLevel)
+            {
+                case 1:
+                    SceneManager.LoadScene("Level_1");
+                    break;
+                case 2:
+                    SceneManager.LoadScene("Level_2");
+                    break;
+                case 3:
+                    SceneManager.LoadScene("Level_3");
+                    break;
+                case 4:
+                    SceneManager.LoadScene("Level_4");
+                    break;
+                case 5:
+                    SceneManager.LoadScene("Level_5");
+                    break;
+                case 6:
+                    SceneManager.LoadScene("Level_6");
+                    break;
+            }
+        }
+
         void ClearnModels()
         {
             Level1Model.ClearModel();

@@ -122,9 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NextLevel2, Assembly-CSharp
-        m_MethodName: nextlevel
+      - m_Target: {fileID: 4050789918388058519}
+        m_TargetAssemblyTypeName: View.EndUI, Assembly-CSharp
+        m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
