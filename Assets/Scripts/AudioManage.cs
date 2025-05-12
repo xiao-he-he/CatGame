@@ -29,6 +29,11 @@ public class AudioManage : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void PlayBGM(AudioClip bgm)
+    {
+        
+    }
+    
     public void PlayClip(AudioClip tclip,bool isloop = false)
     {
         AudioSource a;
