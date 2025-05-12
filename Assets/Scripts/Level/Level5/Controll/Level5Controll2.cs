@@ -25,14 +25,14 @@ public class Level5Controll2 : MonoBehaviour
        
         if (roudian6.transform.position.x >= 0.065f && Level5Model.Instance.isSun)
         { if (isPlay == false) { AudioManage.Instant.StopClip(clip1);
-                AudioManage.Instant.PlayClip(clip2, true);isPlay = true; }   
+                AudioManage.Instant.PlayClip(clip2);isPlay = true; }   
             
             blood.SetActive(true);
         }
     }
     public void judge2()
     {
-        AudioManage.Instant.StopClip(clip2);
+       
         UIimage.SetActive(false);
         blood.SetActive(false);
         if (roudian6.transform.position.x <= Level5Model.Instance.xLimitMax2 && roudian6.transform.position.x >= Level5Model.Instance.xLimitMin2)

@@ -31,7 +31,7 @@ public class Level5Controll : MonoBehaviour
             if(isPlay == false) 
             {
                 AudioManage.Instant.StopClip(clip1);
-            AudioManage.Instant.PlayClip(clip2, true);
+            AudioManage.Instant.PlayClip(clip2);
                 isPlay = true;
             }
             
@@ -41,7 +41,7 @@ public class Level5Controll : MonoBehaviour
 
     public void judge1()
     {
-        AudioManage.Instant.StopClip(clip2);
+        
         UIimage.SetActive(false);
         blood.SetActive(false);
         Level5Model.Instance.isSun = false;

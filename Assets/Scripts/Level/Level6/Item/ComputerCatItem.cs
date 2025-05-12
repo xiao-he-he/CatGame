@@ -12,6 +12,7 @@ public class ComputerCatItem : BaseItem
     public GameObject ComCatItem;
     private bool isPlaying = false;
     public AudioClip clip;
+    public bool isLose = false;
 
     public Text comboText; // ������ʾ Combo �� UI Text ���
     private void Start()
@@ -45,6 +46,7 @@ public class ComputerCatItem : BaseItem
             ComCatItem.SetActive(true);
             musicSource.Pause();
             isPlaying = false;
+            
         }
 
         // �������� Combo ��ʾ
@@ -57,13 +59,14 @@ public class ComputerCatItem : BaseItem
 
         
        
-        if (Level6Model.Instance.MusicModel < 10)
+        if (Level6Model.Instance.MusicModel < 10&& isLose == false)
         {
             EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level6/Music"));
             musicSource.Pause();
             isPlaying = false;
             Level6Model.Instance.MusicModel = 0;
             UpdateComboDisplay(); // ���� Combo ��ʾ״̬
+            isLose = true;
         }
         musicSource.Pause();
         isPlaying = false;

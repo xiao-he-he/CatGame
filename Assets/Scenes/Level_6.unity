@@ -985,6 +985,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8368980753575004778, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
+      propertyPath: AudioSource
+      value: 
+      objectReference: {fileID: 2093810536}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f75c7a5a2a108f442947f21d39305246, type: 3}
 --- !u!1 &213777666
@@ -4415,7 +4419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -4602,7 +4606,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.4, y: -273.79}
+  m_AnchoredPosition: {x: -13, y: -189}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1103420881
@@ -6305,7 +6309,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 189.4, y: -273.79}
+  m_AnchoredPosition: {x: 151, y: -187}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1399027265
@@ -6505,7 +6509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 413.6, y: -273.79}
+  m_AnchoredPosition: {x: 302, y: -191}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418007372
@@ -7149,7 +7153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 36.5287, y: 179.99}
+  m_AnchoredPosition: {x: 36.5287, y: 141}
   m_SizeDelta: {x: 271.1414, y: 127.6241}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1504573887
@@ -8277,7 +8281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -262.5, y: -273.79}
+  m_AnchoredPosition: {x: -154, y: -190}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1733810043
@@ -10776,6 +10780,7 @@ MonoBehaviour:
   LoseUI: {fileID: 1111767027}
   ComCatItem: {fileID: 1228101348}
   clip: {fileID: 8300000, guid: 5a400b786185cd248afe499bb9f027d1, type: 3}
+  isLose: 0
   comboText: {fileID: 1504573887}
 --- !u!82 &2093810536
 AudioSource:

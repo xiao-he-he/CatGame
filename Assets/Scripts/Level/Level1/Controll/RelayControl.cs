@@ -46,10 +46,13 @@ public class RelayControl : MonoBehaviour
 
     void HandleMissClick()
     {
-        Debug.Log("Miss，time +5");
-        Level1Model.Instance.time += 5f;
-        Level1Model.Instance.AllTime += 5f;
-        Level1Model.Instance.Timing -= 5f;
+        if (Time.timeScale > 0f)
+        {
+            Debug.Log("Miss，time +5");
+            Level1Model.Instance.time += 5f;
+            Level1Model.Instance.AllTime += 5f;
+            Level1Model.Instance.Timing -= 5f;
+        }
 
         // 显示"-5s"文字
         ShowMinusTimeText();
@@ -66,8 +69,12 @@ public class RelayControl : MonoBehaviour
             }
 
             // 重置文本并显示
-            minusTimeText.text = "-5s";
-            minusTimeText.gameObject.SetActive(true);
+            if (Time.timeScale > 0f)
+            {
+                minusTimeText.text = "-5s";
+                minusTimeText.gameObject.SetActive(true);
+            }
+        
 
             // 启动新的显示协程
             textDisplayCoroutine = StartCoroutine(HideTextAfterDelay(0.5f));

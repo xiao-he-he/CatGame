@@ -39,7 +39,7 @@ namespace View {
             guide.SetActive(false);
 
             // 恢复游戏
-            Time.timeScale = 1;
+            Time.timeScale = 1.0f;
         }
     }
 }

@@ -8,16 +8,17 @@ public class Level6WinControll : MonoBehaviour
     public GameObject WinUI;    // ʤ��ʱ��ʾ��UI����
     public GameObject Cat;      // ʧ��ʱ��ʾ��è����
     public float checkDelay = 5f; // ����ӳ�ʱ��(��)
-
+    public bool isWin = false;
     private void Start()
     {
         StartCoroutine(CheckDoorStatusAfterDelay());
     }
     public void Update()
     {
-        if (Level6Model.Instance.IsDoor&&Time)
+        if (Level6Model.Instance.IsDoor&&Time&&isWin == false)
         {
             ShowWinUI();
+            isWin = true;
         }
     }
     private IEnumerator CheckDoorStatusAfterDelay()

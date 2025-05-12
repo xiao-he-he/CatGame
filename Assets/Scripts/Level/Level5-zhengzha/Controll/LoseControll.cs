@@ -13,7 +13,7 @@ public class LoseControll : MonoBehaviour
     private float timeElapsed = 0f;
     private float timeLimit = 6f;
     private bool sceneSwitched = false;
-
+    private bool isLose = false;
     public GameObject LoseUI;
     void Update()
     {
@@ -29,9 +29,10 @@ public class LoseControll : MonoBehaviour
                 SceneManager.LoadScene("Level_5");
             }
         }
-        else
+        else if (timeElapsed >= timeLimit&&isLose == false) 
         {
             EndUI.DefeatUI(Resources.Load<Sprite>("Image/Defeat/Level5/Hurt"));
+            isLose = true;
         }
         
     }

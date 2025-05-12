@@ -30,7 +30,7 @@ public class Level5Controll3 : MonoBehaviour
             if (isPlay == false)
             {
                 AudioManage.Instant.StopClip(clip1);
-                AudioManage.Instant.PlayClip(clip2, true);
+                AudioManage.Instant.PlayClip(clip2);
                 isPlay = true;
             }
             blood.SetActive(true);
@@ -38,7 +38,7 @@ public class Level5Controll3 : MonoBehaviour
     }
     public void judge3()
     {
-        AudioManage.Instant.StopClip(clip2);
+        
         UIimage.SetActive(false);
         blood.SetActive(false);
         if (roudian7.transform.position.x <= Level5Model.Instance.xLimitMax3 && roudian7.transform.position.x >= Level5Model.Instance.xLimitMin3)

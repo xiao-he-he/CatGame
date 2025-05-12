@@ -11,6 +11,7 @@ public class Level1TimeControll : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 0;
         // ��ʼ��ʣ��ʱ��
         Level1Model.Instance.Timing = initialTime;
     }
