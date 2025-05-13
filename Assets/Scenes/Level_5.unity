@@ -14145,8 +14145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotPoint: {fileID: 1867312829}
   rotationSpeed: 180
-  minAngle: -78
-  maxAngle: 52
+  minAngle: -48.77
+  maxAngle: 46.4
   rotationAxis: {x: 0, y: 0, z: 1}
   isRotating: 1
   currentAngle: 0
