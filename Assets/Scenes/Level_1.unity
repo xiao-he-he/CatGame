@@ -5730,10 +5730,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.0010109
       objectReference: {fileID: 0}
+    - target: {fileID: 55082082622278039, guid: 1a8251c6486aed24585948609c2b4afc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 55082083393341531, guid: 1a8251c6486aed24585948609c2b4afc, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 55082083622275810, guid: 1a8251c6486aed24585948609c2b4afc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944441766640416855, guid: 1a8251c6486aed24585948609c2b4afc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a8251c6486aed24585948609c2b4afc, type: 3}
 --- !u!1001 &6102595513742339358
