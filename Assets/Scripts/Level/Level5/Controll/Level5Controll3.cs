@@ -55,6 +55,7 @@ public class Level5Controll3 : MonoBehaviour
         else if (roudian7.transform.position.x > Level5Model.Instance.xLimitMin3)
         {
             SceneManager.LoadScene("Level_5_ZhengZha");
+            AudioManage.Instant.StopClip(clip1);
         }
         else
         {

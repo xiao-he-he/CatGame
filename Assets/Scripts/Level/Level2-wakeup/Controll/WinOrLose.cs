@@ -42,6 +42,8 @@ public class WinOrLose : MonoBehaviour
                 }
 
                 Isc = false;
+                WakeUpModel.Instance.AngryTime = 0f;
+                WakeUpModel.Instance.ComfotableTime = 0f; WakeUpModel.Instance.SleepTime = 0f;
             }
             if (WakeUpModel.Instance.SleepTime >= 2.5f)
             {
@@ -51,7 +53,8 @@ public class WinOrLose : MonoBehaviour
                     script.enabled = false;
                 }
                 Isc = false;
-                WakeUpModel.Instance.SleepTime = 0f;
+                WakeUpModel.Instance.AngryTime = 0f;
+                WakeUpModel.Instance.ComfotableTime = 0f; WakeUpModel.Instance.SleepTime = 0f;
             }
             if (WakeUpModel.Instance.AngryTime >= 2.5f)
             {
@@ -62,6 +65,7 @@ public class WinOrLose : MonoBehaviour
                 }
                 Isc = false;
                 WakeUpModel.Instance.AngryTime = 0f;
+                WakeUpModel.Instance.ComfotableTime = 0f; WakeUpModel.Instance.SleepTime = 0f;
             }
 
         }

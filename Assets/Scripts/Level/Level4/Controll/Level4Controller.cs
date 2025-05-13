@@ -281,6 +281,7 @@ namespace Level.Level4.Controll
                 //播放结束动画
                 await UniTask.WaitForSeconds(4f);
                 EndUI.WinUI(Resources.Load<Sprite>("Image/Win/Level4S"));
+               
             }
         }
 
