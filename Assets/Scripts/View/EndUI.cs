@@ -44,6 +44,7 @@ namespace View
         {
             SystemModel.Instance.ThisLevel++;
             ClearnModels();
+            AudioManage.Instant.ClearAll();
             switch (SystemModel.Instance.ThisLevel)
             {
                 case 1:
