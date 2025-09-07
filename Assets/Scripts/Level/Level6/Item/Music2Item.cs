@@ -1,0 +1,136 @@
+using System.Collections;
+using Level.Level4.Item;
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+public class Music2Item :BaseItem
+{
+    public AudioSource timerAudio;
+    public float startY;       // ���Y����
+    public float endY;        // �յ�Y����
+    private bool movementStarted = false;
+    private bool lerpCompleted = false;
+    private float movementStartTime;
+    public float TIME = 40f;
+    private float fallSpeed;   // ������������ٶ�
+    private const float COOLDOWN_DURATION = 0.02f;
+    private bool isOnCooldown = false; 
+    public AudioClip clip1;
+    public AudioClip clip2;
+    void Start()
+    {
+        transform.position = new Vector3(
+            transform.position.x,
+            startY,
+            transform.position.z
+        );
+        // ����̶��ٶȣ�(����)/ʱ��
+        fallSpeed = (startY - endY) / 1f; // 1���ƶ�ʱ��
+    }
+
+    void Update()
+    {
+        if (!movementStarted && timerAudio.time >= TIME - 2f)
+        {
+            movementStarted = true;
+            movementStartTime = timerAudio.time;
+        }
+
+        if (movementStarted)
+        {
+            if (!lerpCompleted)
+            {
+                // ��һ�׶Σ�Lerp�ƶ�
+                float progress = Mathf.Clamp01((timerAudio.time - movementStartTime) / 2f);
+                float newY = Mathf.Lerp(startY, endY, progress);
+                transform.position = new Vector3(
+                    transform.position.x,
+                    newY,
+                    transform.position.z
+                );
+
+                if (progress >= 1f)
+                {
+                    lerpCompleted = true;
+                }
+            }
+            else
+            {
+                // �ڶ��׶Σ���������
+                float newY = transform.position.y - fallSpeed * Time.deltaTime;
+                transform.position = new Vector3(
+                    transform.position.x,
+                    newY,
+                    transform.position.z
+                );
+            }
+            if (!isOnCooldown && Input.GetKeyDown(KeyCode.D))
+            {
+                if (transform.position.y <= 1.2f && transform.position.y >= -1.2f)
+                {
+                    AudioManage.Instant.PlayClip(clip1);
+                    Level6Model.Instance.MusicModel++;
+                    Level6Model.Instance.MusicMode2 = 1;
+                    StartCoroutine(CooldownCoroutine());
+
+                    gameObject.SetActive(false);
+                }
+                else if ((transform.position.y <= 1.66f && transform.position.y > 1.2f) || (transform.position.y < -1.2f && transform.position.y >= -2f))
+                {
+                    gameObject.SetActive(false);
+                    Level6Model.Instance.MissMusic = 1;
+                    AudioManage.Instant.PlayClip(clip2);
+                }
+            }
+            if (transform.position.y < -2f)
+            {
+                Level6Model.Instance.MissMusic = 1;
+                gameObject.SetActive(false);
+            }
+        }
+    }
+    public override void OnPointerClick(PointerEventData eventData)
+    {
+
+
+        float y = transform.position.y;
+
+
+        if (y <= 1.2f && y >= -1.2f)
+        {
+            AudioManage.Instant.PlayClip(clip1);
+            Level6Model.Instance.MusicModel++;
+            Level6Model.Instance.MusicMode2 = 1;
+
+
+            gameObject.SetActive(false);
+        }
+
+        else if ((y <= 1.66f && y > 1.2f) || (y < -1.2f && y >= -2f))
+        {
+            gameObject.SetActive(false);
+            Level6Model.Instance.MissMusic = 1; AudioManage.Instant.PlayClip(clip2);
+        }
+
+
+
+
+    }
+
+
+
+    public override void OnPointerEnter(PointerEventData eventData)
+    {
+
+    }
+
+    public override void OnPointerExit(PointerEventData eventData)
+    {
+    }
+    IEnumerator CooldownCoroutine()
+    {
+        isOnCooldown = true; // ������ȴ״̬
+        yield return new WaitForSeconds(COOLDOWN_DURATION); // �ȴ���ȴʱ��
+        isOnCooldown = false; // ��ȴ����
+    }
+}

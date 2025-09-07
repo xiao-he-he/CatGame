@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿
 using Level.Model;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 namespace Level.Contronal
 {
     public class Level2Controller : BaseLevelController
     {
+        public AudioClip A;
         public Light2D levellamp;
         public Light2D levellight;
         private Level2Model _model = Level2Model.Instance;
@@ -17,7 +16,7 @@ namespace Level.Contronal
 
         public void ChangeLight()
         {
-            
+            AudioManage.Instant.PlayClip(A);
             _model.IsOpenLight = !_model.IsOpenLight;
             if (_model.IsOpenLight)
             {
@@ -49,6 +48,7 @@ namespace Level.Contronal
         
         public void ChangeLamp()
         {
+            AudioManage.Instant.PlayClip(A);
             _model.IsOpenLamp = !_model.IsOpenLamp;
             if (_model.IsOpenLamp)
             {
@@ -74,7 +74,7 @@ namespace Level.Contronal
         {
             if (_model.IsOpenLight && _model.IsOpenLamp)
             {
-                //开始游戏的逻辑
+                SceneManager.LoadScene("Level2-wakeup");
                 return;
             }
             Debug.LogWarning("还没有开所有的灯");

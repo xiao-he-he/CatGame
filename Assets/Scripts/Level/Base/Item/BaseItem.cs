@@ -1,6 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using Level.Contronal;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -16,12 +14,8 @@ public abstract class BaseItem : MonoBehaviour,IPointerClickHandler,IPointerEnte
 
     public abstract void OnPointerClick(PointerEventData eventData);
 
-    public abstract void OnPointerEnter(PointerEventData eventData);
+    public virtual void OnPointerEnter(PointerEventData eventData){}
 
-    public abstract void OnPointerExit(PointerEventData eventData);
-
-    protected static bool OnPointerClick()
-    {
-        throw new NotImplementedException();
-    }
+    public virtual void OnPointerExit(PointerEventData eventData){}
+    
 }
